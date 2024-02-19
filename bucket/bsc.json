@@ -1,0 +1,25 @@
+{
+    "version": "3.3.2",
+    "description": "High performance block-sorting data compression library",
+    "homepage": "http://libbsc.com/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/IlyaGrebnov/libbsc/releases/download/v3.3.2/bsc-3.3.2-x64.zip",
+            "hash": "12725943A23D8F77C9B8B5CC1D047188C4BBBAB06A271E1A4167596DE79DFB6D",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\bscd.exe.zip\" \"$dir\"",
+                "Remove-Item $dir\\bscd.exe.zip -ErrorAction Ignore"
+            ],
+            "bin": ["bsc.exe", "bscd.exe"]
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/IlyaGrebnov/libbsc/releases/download/v$version/bsc-$version-x64.zip"
+            }
+        }
+    }
+}

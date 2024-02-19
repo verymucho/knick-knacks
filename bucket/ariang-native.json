@@ -1,0 +1,32 @@
+{
+    "version": "1.3.2",
+    "description": "A better aria2 desktop frontend than AriaNg",
+    "homepage": "http://ariang.mayswind.net/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mayswind/AriaNg-Native/releases/download/1.3.2/AriaNg_Native-1.3.2-Windows-x64.7z",
+            "hash": "sha512:41750E785D81D6F33858259F85887B242B623CD310E07D7383282B192A8A962843C541D68E6D23F49C2365C63F73D021BA0DBD4DA70819009910FE0F6A21286A"
+        },
+        "32bit": {
+            "url": "https://github.com/mayswind/AriaNg-Native/releases/download/1.3.2/AriaNg_Native-1.3.2-Windows-x86.7z",
+            "hash": "8c6fb91adad7e76bd50eac5ef235392e247c6379e1fd2848759365ccf11dfd7a"
+        }
+    },
+    "shortcuts": [
+        [
+            "AriaNg Native.exe", "AriaNg Native"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mayswind/AriaNg-Native/releases/download/$version/AriaNg_Native-$version-Windows-x64.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/mayswind/AriaNg-Native/releases/download/$version/AriaNg_Native-$version-Windows-x86.7z"
+            }
+        }
+    }
+}

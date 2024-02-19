@@ -1,0 +1,24 @@
+{
+    "version": "1.7.8",
+    "description": "Your entire server infrastructure at your fingertips",
+    "homepage": "https://xpipe.io/",
+    "license": "Apache-2.0",
+    "url": "https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-portable-windows-x86_64.zip",
+    "hash": "61562443D5A434C5FE310A312828191DF1B080D557C2B1372BAD9F9A0E6868B6",
+    "extract_dir": "xpipe-1.7.8",
+    "bin": [
+        "cli\\bin\\xpipe.exe",
+        "app\\xpiped.exe"
+    ],
+    "shortcuts": [
+        [
+            "app\\xpiped.exe",
+            "XPipe"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-x86_64.zip",
+        "extract_dir": "xpipe-$version"
+    }
+}

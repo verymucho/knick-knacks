@@ -1,0 +1,26 @@
+{
+    "version": "0.14.3",
+    "description": "Filesystem in userspace (FUSE) with transparent authenticated encryption",
+    "homepage": "https://github.com/netheril96/securefs",
+    "license": "MIT",
+    "suggest": {
+        "winfsp-np": "winfsp-np"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/netheril96/securefs/releases/download/0.14.3/securefs-windows-amd64.zip",
+            "hash": "212D875F76411E7DB5FA867139194A409AF1CC8064ED6820735184513E4A33D8"
+        }
+    },
+    "bin": [
+        "securefs.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/netheril96/securefs/releases/download/$version/securefs-windows-amd64.zip"
+            }
+        }
+    }
+}

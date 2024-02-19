@@ -1,0 +1,34 @@
+{
+    "version": "2024.02.18.1708223862",
+    "description": "A command-line program to download videos from YouTube and many other video platforms.",
+    "homepage": "https://github.com/ytdl-patched/ytdl-patched",
+    "license": "Unlicense",
+    "suggest": {
+        "ffmpeg": "ffmpeg-yt-dlp"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ytdl-patched/ytdl-patched/releases/download/2024.02.18.1708223862/ytdl-patched-red.exe",
+            "hash": "6a4155d136f7fd8b94cf2c3267f4dd3fad0a25aa2f4f748563838801f21629ae"
+        }
+    },
+    "bin": [
+        [
+            "ytdl-patched-red.exe",
+            "ytdl-patched"
+        ]
+    ],
+    "pre_install": "if (-not (Test-Path \"$persist_dir\\yt-dlp.conf\")) { New-Item \"$dir\\yt-dlp.conf\" -ItemType file | Out-Null }",
+    "persist": [
+        "yt-dlp.conf",
+        "ytdlp_plugins"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ytdl-patched/ytdl-patched/releases/download/$version/ytdl-patched-red.exe"
+            }
+        }
+    }
+}
