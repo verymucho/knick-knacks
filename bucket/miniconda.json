@@ -26,7 +26,11 @@
         "(& $dir\\scripts\\conda.exe shell.powershell hook) | Out-String | Invoke-Expression",
         "Remove-Item \"$dir\\..\\setup.exe\" -Force | Out-Null"
     ],
-    "uninstaller": "Start-Process \"$dir\\Uninstall-Miniconda3.exe\" -ArgumentList '/S' -Wait | Out-Null",
+    "uninstaller": {
+        "script": [
+            "Start-Process \"$dir\\Uninstall-Miniconda3.exe\" -ArgumentList '/S' -Wait | Out-Null"
+        ]
+    },
     "checkver": {
         "url": "https://repo.anaconda.com/miniconda/",
         "re": "Miniconda3-py(?<pyversion>31[\\d]+)_([\\d.]+(-\\d+)?)-Windows"
