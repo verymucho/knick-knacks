@@ -1,15 +1,15 @@
 {
-    "version": "6.0-5",
+    "version": "6.0.1-3",
     "description": "FFmpeg for Jellyfin",
-    "homepage": "https://github.com/jellyfin/jellyfin-ffmpeg",
+    "homepage": "https://github.com/jellyfin/jellyfin-ffmpeg/",
     "license": "LGPL v2.1+",
     "suggest": {
         "jellyfin": "jellyfin"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v6.0-5/jellyfin-ffmpeg_6.0-5-portable_win64.zip",
-            "hash": "195F1120E9F9068A2E5359E583BAC2E4EA3C994BC6805A09BD0E3385F79DE377"
+            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v6.0.1-3/jellyfin-ffmpeg_6.0.1-3-portable_win64.zip",
+            "hash": "1f674e65a938d38be2edbd89f3ee34053d0533c66c4902c5dda142179aaf3f05"
         }
     },
     "bin": [

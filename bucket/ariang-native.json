@@ -1,7 +1,7 @@
 {
     "version": "1.3.2",
     "description": "A better aria2 desktop frontend than AriaNg",
-    "homepage": "http://ariang.mayswind.net/",
+    "homepage": "https://github.com/mayswind/AriaNg-Native/",
     "license": "MIT",
     "architecture": {
         "64bit": {
