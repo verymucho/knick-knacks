@@ -1,12 +1,12 @@
 {
-    "version": "60.4",
+    "version": "60.5",
     "description": "Advanced and compatible fork of ZPAQ 7.15",
     "homepage": "https://github.com/fcorbelli/zpaqfranz",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/60.4/zpaqfranz.exe",
-            "hash": "a9bf1af8e4969187c71eac446dbc2dea0156b7d7775609ae5cae3b46f4ca862b",
+            "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/60.5/zpaqfranz.exe",
+            "hash": "b44f352972c85d8b0455d4923a949cbc9d881eb2dccabd5023fd7f801861f258",
             "bin": [
                 [
                     "zpaqfranz.exe",
@@ -15,8 +15,8 @@
             ]
         },
         "32bit": {
-            "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/60.4/zpaqfranz32.exe",
-            "hash": "03cfbd673198d613f32e4a8c014dad688b6a07d1e840e87ddc97851db793adda",
+            "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/60.5/zpaqfranz32.exe",
+            "hash": "efb2e606ee7fc178da55029f9f25b25d82dc16dbdcf8d510224a88f504a56b4f",
             "bin": [
                 "zpaqfranz32.exe",
                 "zpaq"
