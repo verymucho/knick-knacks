@@ -1,11 +1,11 @@
 {
-    "version": "10.20240831-g152c87140b1d08cc9827b3f4faca325c5d814be8",
+    "version": "10.20240831-gfb186ab0a888a1dd53bfd991f35200eed59d77b7",
     "description": "Manage files with git, without comitting them.",
     "homepage": "https://git-annex.branchable.com/",
     "license": "AGPL-3.0-or-later",
     "bin": "usr/bin/git-annex.exe",
     "url": "https://downloads.kitenet.net/git-annex/autobuild/windows/git-annex-installer.exe#/dl.7z",
-    "hash": "c2d2261a02d67591b6a17fd6a45260e60031d728ee4c6c52857871d03b62d73e",
+    "hash": "e8d2d7cd0ca0c9ba2314ac22fa8703769ba69503385581164f33eddfe25dfb62",
     "checkver": {
         "url": "https://downloads.kitenet.net/git-annex/autobuild/windows/build-version",
         "regex": "([\\d\\D]+)"
