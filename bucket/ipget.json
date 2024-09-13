@@ -1,34 +1,32 @@
 {
-  "version": "0.10.0",
-  "description": "Retrieve files over IPFS and save them locally",
-  "homepage": "https://github.com/ipfs/ipget",
-  "license": "MIT",
-  "architecture": {
-      "64bit": {
-          "url": "https://dist.ipfs.tech/ipget/v0.10.0/ipget_v0.10.0_windows-amd64.zip",
-          "hash": "3F515B709E2F2F6890CC6D6760B2FFF703F3F9975C9B3505B1E847B9377973AB"
-      },
-      "32bit": {
-          "url": "https://dist.ipfs.tech/ipget/v0.10.0/ipget_v0.10.0_windows-386.zip",
-          "hash": "352e4007a8eb271d1f05b6bbc0799b35303a6304781cbfe345bedbaba6a560ed"
-      }
-  },
-  "extract_dir": "ipget",
-  "post_install": [
-      "Remove-Item \"$dir\\install.sh\" -Recurse"
-  ],
-  "bin": "ipget.exe",
-  "checkver": {
-    "github": "https://github.com/ipfs/ipget"
-  },
-  "autoupdate": {
+    "version": "0.11.0",
+    "description": "Retrieve files over IPFS and save them locally",
+    "homepage": "https://github.com/ipfs/ipget",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://dist.ipfs.tech/ipget/v$version/ipget_v$version_windows-amd64.zip"
+            "url": "https://dist.ipfs.tech/ipget/v0.11.0/ipget_v0.11.0_windows-amd64.zip",
+            "hash": "a32a2499988ccc253c54d179c2c8cda0da542e76ce394cdc16b8c79322dd1dc7"
         },
         "32bit": {
-            "url": "https://dist.ipfs.tech/ipget/v$version/ipget_v$version_windows-386.zip"
+            "url": "https://dist.ipfs.tech/ipget/v0.11.0/ipget_v0.11.0_windows-386.zip",
+            "hash": "31b31f06b7ae40dde26b92e1ee9d03a4f433cb8199407eb540a0fc71edfbfd4b"
+        }
+    },
+    "extract_dir": "ipget",
+    "post_install": "Remove-Item \"$dir\\install.sh\" -Recurse",
+    "bin": "ipget.exe",
+    "checkver": {
+        "github": "https://github.com/ipfs/ipget"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dist.ipfs.tech/ipget/v$version/ipget_v$version_windows-amd64.zip"
+            },
+            "32bit": {
+                "url": "https://dist.ipfs.tech/ipget/v$version/ipget_v$version_windows-386.zip"
+            }
         }
     }
-  }
 }
