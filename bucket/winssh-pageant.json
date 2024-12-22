@@ -1,0 +1,30 @@
+{
+    "version": "v2.3.1",
+    "description": "Bridge to Windows OpenSSH agent from Pageant.",
+    "homepage": "https://github.com/ndbeals/winssh-pageant",
+    "license": "BSD 3-Clause License",
+    "architecture": {
+		"32bit": {
+            "url": "https://github.com/ndbeals/winssh-pageant/releases/download/v2.3.1/winssh-pageant-v2.3.1_386.zip",
+            "hash": "3B5AA459DB487446A25922F3EE79E8EFE1FEED5A2D0A3DD451AA6EB1CDFBE051"
+        },
+        "64bit": {
+            "url": "https://github.com/ndbeals/winssh-pageant/releases/download/v2.3.1/winssh-pageant-v2.3.1_amd64.zip",
+            "hash": "D6E32877B309F350A1430295932CCD3AC2C05CDE7B0E6088212DEBEE420EC6B2"
+        }
+    },
+    "bin": [
+        "winssh-pageant.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+			"32bit": {
+                "url": "https://github.com/ndbeals/winssh-pageant/releases/download/$version/winssh-pageant-$version_386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/ndbeals/winssh-pageant/releases/download/$version/winssh-pageant-$version_amd64.zip"
+            }
+        }
+    }
+}
