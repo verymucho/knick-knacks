@@ -13,7 +13,12 @@
             "hash": "D6E32877B309F350A1430295932CCD3AC2C05CDE7B0E6088212DEBEE420EC6B2"
         }
     },
-    "bin": ["winssh-pageant.exe"],
+    "shortcuts": [
+        [
+            "winssh-pageant.exe",
+            "WinSSH Pageant"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
