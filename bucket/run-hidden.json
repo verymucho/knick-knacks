@@ -1,13 +1,35 @@
 {
-    "version": "1.2",
+    "version": "1.4",
     "description": "Runs Windows console apps in a hidden console window.",
     "homepage": "https://github.com/stax76/run-hidden",
     "license": "MIT",
-    "url": "https://github.com/stax76/run-hidden/releases/download/v1.2/run-hidden-v1.2.zip",
-    "hash": "200f28531d41f1cb9c0ba81258bd89c149276bec806ea10bfeac86dd6e16c36f",
-    "bin": "run-hidden.exe",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/stax76/run-hidden/releases/download/v1.4/run-hidden.exe",
+            "hash": "200f28531d41f1cb9c0ba81258bd89c149276bec806ea10bfeac86dd6e16c36f",
+            "bin": "run-hidden.exe"
+        },
+        "64bit": {
+            "url": "https://github.com/stax76/run-hidden/releases/download/v1.4/run-hidden64.exe",
+            "hash": "200f28531d41f1cb9c0ba81258bd89c149276bec806ea10bfeac86dd6e16c36f",
+            "bin": [
+                "run-hidden64.exe",
+                [
+                    "run-hidden64.exe",
+                    "run-hidden"
+                ]
+            ]
+        }
+    },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/stax76/run-hidden/releases/download/v$version/run-hidden-v$version.zip"
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/stax76/run-hidden/releases/download/v$version/run-hidden.exe"
+            },
+            "64bit": {
+                "url": "https://github.com/stax76/run-hidden/releases/download/v$version/run-hidden64.exe"
+            }
+        }
     }
 }
