@@ -16,7 +16,10 @@
         "ffmpeg.exe",
         "ffprobe.exe"
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/jellyfin/jellyfin-ffmpeg",
+        "regex": "/releases/tag/v([\\d.-]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
