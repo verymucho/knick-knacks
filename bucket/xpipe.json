@@ -1,11 +1,11 @@
 {
-    "version": "14.1",
+    "version": "14.1.1",
     "description": "Your entire server infrastructure at your fingertips",
     "homepage": "https://github.com/xpipe-io/xpipe/",
     "license": "Apache-2.0",
-    "url": "https://github.com/xpipe-io/xpipe/releases/download/14.1/xpipe-portable-windows-x86_64.zip",
-    "hash": "97744508dc66873cfa6d75f29a7227a56b98dd3795fff264f79d1d88d2d4f0b6",
-    "extract_dir": "xpipe-14.1",
+    "url": "https://github.com/xpipe-io/xpipe/releases/download/14.1.1/xpipe-portable-windows-x86_64.zip",
+    "hash": "5ec87731fcf544f12708973c52b2a95e4f6a8a56e820f0671a341a013747dc65",
+    "extract_dir": "xpipe-14.1.1",
     "bin": [
         "cli\\bin\\xpipe.exe",
         "app\\xpiped.exe"
