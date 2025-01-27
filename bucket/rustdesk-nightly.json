@@ -14,8 +14,9 @@
       "extract_dir": "PFiles64\\RustDesk"
     },
     "32bit": {
-      "url": "https://github.com/rustdesk/rustdesk/releases/download/nightly/rustdesk-1.3.7-x86-sciter.exe#/RustDesk.exe",
-      "hash": "fcf496810c6758f033d173e769e8c1943bd997c8bd47b59f40365aaf0f9068b5"
+      "url": "https://github.com/rustdesk/rustdesk/releases/download/nightly/rustdesk-1.3.7-x86-sciter.exe",
+      "hash": "fcf496810c6758f033d173e769e8c1943bd997c8bd47b59f40365aaf0f9068b5",
+      "pre_install": "Get-ChildItem \"$dir\" 'rustdesk-*.exe' | Select-Object -First 1 | Rename-Item -NewName 'RustDesk.exe'"
     }
   },
   "shortcuts": [
