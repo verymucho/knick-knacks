@@ -1,12 +1,12 @@
 {
-    "version": "1.12.0",
+    "version": "1.13.0",
     "homepage": "https://github.com/antonmedv/walk/",
     "description": "Terminal file manager",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/antonmedv/walk/releases/download/v1.12.0/walk_windows_amd64.exe",
-            "hash": "92ffbe5462ce83ab02d86f625f3b59b17bfc6032383acae8b1344cc03bc31aca",
+            "url": "https://github.com/antonmedv/walk/releases/download/v1.13.0/walk_windows_amd64.exe",
+            "hash": "ca1cc15e0a7e57799bb22f5307a1546662c6ad1e8dcf9831df0ad1f2a4c6e242",
             "bin": [
                 [
                     "llama_windows_amd64.exe",
