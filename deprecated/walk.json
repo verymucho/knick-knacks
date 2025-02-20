@@ -9,8 +9,8 @@
             "hash": "ca1cc15e0a7e57799bb22f5307a1546662c6ad1e8dcf9831df0ad1f2a4c6e242",
             "bin": [
                 [
-                    "llama_windows_amd64.exe",
-                    "llama"
+                    "walk_windows_amd64.exe",
+                    "walk"
                 ]
             ]
         }
