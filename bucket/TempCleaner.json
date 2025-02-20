@@ -6,7 +6,7 @@
     "identifier": "Freeware",
     "url": "https://www.sordum.org/eula/"
   },
-  "url": "https://www.sordum.org/files/small-tools/TempCleaner.zip",
+  "url": "https://www.sordum.org/files/download/temp-cleaner/TempCleaner.zip",
   "hash": "3a2623fd60b96e9a82c39a8839b8910492bec79769e89bbc9cba199d952f887c",
   "extract_dir": "TempCleaner",
   "architecture": {
@@ -35,8 +35,11 @@
       ]
     }
   },
-  "checkver": "Temp Cleaner\\s*v([\\d.]+)",
+  "checkver": {
+    "url": "https://www.sordum.org/9190/",
+    "regex": "Temp Cleaner\\s*v([\\d.]+)"
+  },
   "autoupdate": {
-    "url": "https://www.sordum.org/9190/"
+    "url": "https://www.sordum.org/files/download/temp-cleaner/TempCleaner.zip"
   }
 }
