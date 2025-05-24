@@ -22,10 +22,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.guru3d.com/download/display-driver-uninstaller-download/",
-        "regex": "<title>Display Driver Uninstaller \\(DDU\\) download version ([\\d.]+)</title>"
+        "url": "https://www.wagnardsoft.com/display-driver-uninstaller-DDU-",
+        "regex": "Download Display Driver Uninstaller \\(DDU\\) ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/ddu/%5BGuru3D%5D-DDU.zip"
+        "url": "https://www.wagnardsoft.com/DDU/download/DDU%20v$version.exe"
     }
 }
