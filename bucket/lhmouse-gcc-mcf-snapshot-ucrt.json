@@ -1,5 +1,5 @@
 {
-    "homepage": "https://gcc-mcf.lhmouse.com/",
+    "homepage": "https://gcc-mcf.lhmouse.com",
     "description": "MinGW-w64 GCC build with UCRT and the MCF thread model (Snapshot version)",
     "version": "14.2.1-20240821-ucrt",
     "license": "GPL-2.0-only,LGPL-3.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
@@ -12,7 +12,6 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "url": "https://gcc-mcf.lhmouse.com/",
         "regex": "(?sm)mingw-w64-gcc-mcf_(?<Date>[\\d]{8})_(?<GccVersion>[\\d.]+)_x64-ucrt_(?<Hash64>[0-9a-f]{40})",
         "replace": "${GccVersion}-${Date}-ucrt"
     },
