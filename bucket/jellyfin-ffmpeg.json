@@ -1,5 +1,5 @@
 {
-    "version": "7.1.1-7",
+    "version": "7.1.2-1",
     "description": "FFmpeg for Jellyfin",
     "homepage": "https://github.com/jellyfin/jellyfin-ffmpeg/",
     "license": "LGPL v2.1+",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.1-7/jellyfin-ffmpeg_7.1.1-7_portable_win64-clang-gpl.zip",
-            "hash": "6a5904b518d8aa96c999742559ea93207af2a0da883fdbad6a2af49ab6098fd9"
+            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.2-1/jellyfin-ffmpeg_7.1.2-1_portable_win64-clang-gpl.zip",
+            "hash": "dfc31af46cdef5af88dc1284056a70a4c90435a3398d7c3e0d3cee12bf7d8526"
         }
     },
     "bin": [
