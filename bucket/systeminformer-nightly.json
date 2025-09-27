@@ -1,20 +1,20 @@
 {
-    "version": "3.2.25269.418",
+    "version": "3.2.25270.320",
     "description": "A powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
     "homepage": "https://systeminformer.sourceforge.io",
     "license": "MIT",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/winsiderss/si-builds/releases/download/3.2.25269.418/systeminformer-build-win32-bin.zip",
-            "hash": "3e6a5b7f4d4e927e2637c0c4c539557df663e4fad4a88975847ee7ee1a0f0c1d"
+            "url": "https://github.com/winsiderss/si-builds/releases/download/3.2.25270.320/systeminformer-build-win32-bin.zip",
+            "hash": "dd2819872073dfe11747ab376513b855015cac891470b44e8e67b613d9473ceb"
         },
         "64bit": {
-            "url": "https://github.com/winsiderss/si-builds/releases/download/3.2.25269.418/systeminformer-build-win64-bin.zip",
-            "hash": "9e9c50e756d6aa79eacbf4740020786abc390f223414bec3fae40bdb9bfcaa71"
+            "url": "https://github.com/winsiderss/si-builds/releases/download/3.2.25270.320/systeminformer-build-win64-bin.zip",
+            "hash": "c0ce1854e89bc6c430662d0ba145afae7c5bdd4de09479126870cf83f0417c2f"
         },
         "arm64": {
-            "url": "https://github.com/winsiderss/si-builds/releases/download/3.2.25269.418/systeminformer-build-arm64-bin.zip",
-            "hash": "a469455010af87bbf8bb25f865b78bb9e5a1bc46c0d3129bf8c9e1541623589c"
+            "url": "https://github.com/winsiderss/si-builds/releases/download/3.2.25270.320/systeminformer-build-arm64-bin.zip",
+            "hash": "3112382e3f9794f206ad8b2c63841c3df49ce9fa67ce7eba96163c15830d93f7"
         }
     },
     "pre_install": [
