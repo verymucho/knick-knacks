@@ -22,7 +22,7 @@
         ]
     ],
     "persist": [
-        "3rdParty\\ffmpeg\\bin",
+        "3rdParty\\ffmpeg",
         "Downloads",
         "local"
     ],
