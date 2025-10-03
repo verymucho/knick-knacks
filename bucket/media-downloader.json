@@ -15,7 +15,6 @@
             "extract_dir": "MediaDownloaderQt5-5.4.3"
         }
     },
-    "bin": "media-downloader.exe",
     "shortcuts": [
         [
             "media-downloader.exe",
@@ -23,6 +22,7 @@
         ]
     ],
     "persist": [
+        "3rdParty\\ffmpeg\\bin",
         "Downloads",
         "local"
     ],
