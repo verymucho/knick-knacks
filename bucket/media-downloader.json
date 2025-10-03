@@ -23,6 +23,7 @@
     ],
     "persist": [
         "3rdParty\\ffmpeg",
+        "3rdParty\\aria2",
         "Downloads",
         "local"
     ],
