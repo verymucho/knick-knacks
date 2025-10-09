@@ -1,27 +1,27 @@
 {
-    "version": "25.10.0",
+    "version": "25.10.1",
     "description": "A desktop app to easily download media files hosted on popular websites.",
     "homepage": "https://github.com/vegidio/umd-app",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/vegidio/umd-app/releases/download/25.10.0/umd-gui_windows_amd64.zip",
-                "https://github.com/vegidio/umd-app/releases/download/25.10.0/umd-cli_windows_amd64.zip"
+                "https://github.com/vegidio/umd-app/releases/download/25.10.1/umd-gui_windows_amd64.zip",
+                "https://github.com/vegidio/umd-app/releases/download/25.10.1/umd-cli_windows_amd64.zip"
             ],
             "hash": [
-                "3150137f37e5f6037149db10144bedf61280f104ac2a22fb233d7bbe50d2b286",
-                "27fca30dd077210032587c93a4adfd38c5234268da105771f5f53a5cbac25511"
+                "359a000de20252d195018adf9bacccccf4da45ca32b6fe7bd87ffb867f4c406b",
+                "13b528d3ffe46094e46f256ad4dea9e46ea29df50f195305e1c4cc0f97542a41"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/vegidio/umd-app/releases/download/25.10.0/umd-gui_windows_arm64.zip",
-                "https://github.com/vegidio/umd-app/releases/download/25.10.0/umd-cli_windows_arm64.zip"
+                "https://github.com/vegidio/umd-app/releases/download/25.10.1/umd-gui_windows_arm64.zip",
+                "https://github.com/vegidio/umd-app/releases/download/25.10.1/umd-cli_windows_arm64.zip"
             ],
             "hash": [
-                "9396f14b237c560afc2d6ae1f9ce7a74b6bd17eb792704caffecfbe4a3fc3b22",
-                "e94b6b982679afee8e5250a7f62e046534240e464827f1bf70eb706d050b5c23"
+                "ef6ba77e2a23c06387c77df542c319143290c732c1a9953fbcf08f912c494995",
+                "c52000d50f01af4bc10575a36e0efae9c667a5b9b106dabe49a25f0835c5fe76"
             ]
         }
     },
