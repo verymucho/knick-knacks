@@ -1,0 +1,31 @@
+{
+    "version": "2025.2.0",
+    "description": "Cross-platform API testing client for humans.",
+    "homepage": "https://github.com/httpie/desktop/",
+    "license": "Custom",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/httpie/desktop/releases/download/v2025.2.0/HTTPie-Setup-2025.2.0.exe#/dl.7z",
+            "hash": "17f0e0312ac813cd6517b271bff4c0af74d452822075e97bc26e420de0800ed5"
+        }
+    },
+    "extract_dir": "$PLUGINSDIR",
+    "pre_install": [
+        "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
+        "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal"
+    ],
+    "shortcuts": [
+        [
+            "HTTPie.exe",
+            "HTTPie"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/httpie/desktop/releases/download/v$version/HTTPie-Setup-$version.exe#/dl.7z"
+            }
+        }
+    }
+}
