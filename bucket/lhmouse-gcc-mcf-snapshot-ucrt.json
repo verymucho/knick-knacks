@@ -12,6 +12,10 @@
     },
     "env_add_path": "bin",
     "checkver": {
+        "script": [
+            "$userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'",
+            "(Invoke-WebRequest 'https://gcc-mcf.lhmouse.com' -UserAgent $userAgent).Links.href | Where-Object { $_ -Match '.*mingw-w64-gcc-mcf.*ucrt.*7z' } | Select-Object -Index 0"
+        ],
         "regex": "(?sm)mingw-w64-gcc-mcf_(?<Date>[\\d]{8})_(?<GccVersion>[\\d.]+)_x64-ucrt_(?<Hash64>[0-9a-f]{40})",
         "replace": "${GccVersion}-${Date}-ucrt"
     },
