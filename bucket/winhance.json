@@ -1,0 +1,29 @@
+{
+    "version": "25.11.03",
+    "description": "Application designed to optimize and customize your Windows experience.",
+    "homepage": "https://winhance.net/",
+    "license": "CC-BY-4.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/memstechtips/Winhance/releases/download/v25.11.03/Winhance.Installer.exe",
+            "hash": "3bd6e1721068fd8ed7bc92cf39c09f1c586c2624f16217d47063ef8e9c788b3d"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "Winhance.exe",
+            "Winhance"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/memstechtips/Winhance"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/memstechtips/Winhance/releases/download/v$version/Winhance.Installer.exe"
+            }
+        }
+    }
+}
