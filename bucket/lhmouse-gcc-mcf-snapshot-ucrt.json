@@ -1,17 +1,18 @@
 {
     "homepage": "https://gcc-mcf.lhmouse.com",
     "description": "MinGW-w64 GCC build with UCRT and the MCF thread model (Snapshot version)",
-    "version": "16.0.0-20251022-ucrt",
+    "version": "16.0.0-20251106-ucrt",
     "license": "GPL-2.0-only,LGPL-3.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20251022_16.0.0_x64-ucrt_b68ec252ea427011b29267f05cd481095ae306b7.7z",
-            "hash": "sha1:b68ec252ea427011b29267f05cd481095ae306b7",
+            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20251106_16.0.0_x64-ucrt_cea33f3edb0ec3f8ebde594581e52878c8efa364.7z",
+            "hash": "sha1:cea33f3edb0ec3f8ebde594581e52878c8efa364",
             "extract_dir": "ucrt64"
         }
     },
     "env_add_path": "bin",
     "checkver": {
+        "url": "https://scoop.sh",
         "script": [
             "$userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'",
             "(Invoke-WebRequest 'https://gcc-mcf.lhmouse.com' -UserAgent $userAgent).Links.href | Where-Object { $_ -Match '.*mingw-w64-gcc-mcf.*ucrt.*7z' } | Select-Object -Index 0"
