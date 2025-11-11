@@ -1,5 +1,5 @@
 {
-    "version": "121733-g032bdf8ebd-20251110",
+    "version": "121735-gbe99d2c0b2-20251111",
     "description": "FFMpeg builds of latest release branch with patches necessary for smooth integration with yt-dlp",
     "homepage": "https://github.com/yt-dlp/FFmpeg-Builds",
     "license": "MIT",
@@ -8,14 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-11-10-14-33/ffmpeg-N-121733-g032bdf8ebd-win64-gpl.zip",
-            "hash": "bf00537ae44ce997894602b29deb017f9d5be0705cd73db2daccee24513bfdc9",
-            "extract_dir": "ffmpeg-N-121733-g032bdf8ebd-win64-gpl"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-11-11-14-18/ffmpeg-N-121735-gbe99d2c0b2-win64-gpl.zip",
+            "hash": "fd6f85edbb18a18d441664b1debbb2df4d9819f148fc3bde692561a3b455b591",
+            "extract_dir": "ffmpeg-N-121735-gbe99d2c0b2-win64-gpl"
         },
         "32bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-11-10-14-33/ffmpeg-N-121733-g032bdf8ebd-win32-gpl.zip",
-            "hash": "f85a81e59185a670ec12cbcd09c434b90beea1f0da7cd01efa3869c5f14aa077",
-            "extract_dir": "ffmpeg-N-121733-g032bdf8ebd-win32-gpl"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-11-11-14-18/ffmpeg-N-121735-gbe99d2c0b2-win32-gpl.zip",
+            "hash": "620dbefcaf07c7407dcb4310ede203411eb2627113ea7a51ab6ee6d72d20edfc",
+            "extract_dir": "ffmpeg-N-121735-gbe99d2c0b2-win32-gpl"
         }
     },
     "checkver": {
