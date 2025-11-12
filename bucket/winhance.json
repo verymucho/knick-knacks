@@ -1,12 +1,12 @@
 {
-    "version": "25.11.07",
+    "version": "25.11.12",
     "description": "Application designed to optimize and customize your Windows experience.",
     "homepage": "https://winhance.net/",
     "license": "CC-BY-4.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/memstechtips/Winhance/releases/download/v25.11.07/Winhance.Installer.exe",
-            "hash": "03acf4f105b508c8101069ccbfa55eabea27fb35205b363b03c1bc0aad907d0a"
+            "url": "https://github.com/memstechtips/Winhance/releases/download/v25.11.12/Winhance.Installer.exe",
+            "hash": "c9d1f3d9bbe83e963d2c15237a7b3aa027024f0509d8ffa929428aa44184ee41"
         }
     },
     "innosetup": true,
