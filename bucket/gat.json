@@ -1,20 +1,20 @@
 {
-    "version": "0.25.6",
+    "version": "0.25.7",
     "description": "A cat alternative written in Go",
     "homepage": "https://github.com/koki-develop/gat",
     "license": "MIT",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/koki-develop/gat/releases/download/v0.25.6/gat_Windows_i386.zip",
-            "hash": "f1b023bf837f3df396eeb2274dae9ccab65c09ff2bcccc253b6763cc8f08c017"
+            "url": "https://github.com/koki-develop/gat/releases/download/v0.25.7/gat_Windows_i386.zip",
+            "hash": "8e3c465950c58d376afefc121891c91fab27897831df644193382d2c7acc5f1b"
         },
         "64bit": {
-            "url": "https://github.com/koki-develop/gat/releases/download/v0.25.6/gat_Windows_x86_64.zip",
-            "hash": "1574c5d7f8c51fdec12d07efe6e491f5899bd68dcc3c0b82d02386636d271679"
+            "url": "https://github.com/koki-develop/gat/releases/download/v0.25.7/gat_Windows_x86_64.zip",
+            "hash": "459ae41f56dea8510739e29c5e173ecbf8baeeac57a9565c1aebbe58e77ba1c9"
         },
         "arm64": {
-            "url": "https://github.com/koki-develop/gat/releases/download/v0.25.6/gat_Windows_arm64.zip",
-            "hash": "6397b344ed9e2e3e3aa8d5c86a1267e3b87983a3e2031e1985fe5ee614a2aafe"
+            "url": "https://github.com/koki-develop/gat/releases/download/v0.25.7/gat_Windows_arm64.zip",
+            "hash": "8b306d0de9239f87b6e52d64c36f59b404a1b03aba3f603dd7f43169b6c2b0bf"
         }
     },
     "bin": "gat.exe",
