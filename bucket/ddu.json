@@ -9,10 +9,8 @@
     "url": "https://www.wagnardsoft.com/DDU/download/DDU%20v18.1.3.9.exe",
     "hash": "7c52e7bbbef3a32c1117c1ef402b96765d2d770a8a0c0dcc2f5af5c11c89ab07",
     "pre_install": [
-        "$ddu = \"DDU v$version\"",
-        "Move-Item \"$dir/$ddu/*\" \"$dir\" -Force",
-        "Remove-Item \"$dir/$ddu\" -Recurse",
-        "if (!(Test-Path \"$persist_dir/Settings/Settings.xml\")) { New-Item \"$dir/Settings/Settings.xml\" | Out-Null }"
+        "Expand-7zipArchive \"$dir\\*DDU*.exe\" -DestinationPath \"$dir\" -ExtractDir \"DDU v$version\" -Removal",
+        "if (!(Test-Path \"$persist_dir\\Settings\\Settings.xml\")) { New-Item \"$dir\\Settings\\Settings.xml\" | Out-Null }"
     ],
     "persist": "Settings\\Settings.xml",
     "shortcuts": [
