@@ -1,6 +1,6 @@
 {
-    "version": "121910-gcac5018eb9-20251127",
-    "description": "FFMpeg builds of latest release branch with patches necessary for smooth integration with yt-dlp",
+    "version": "20251127-121910-gcac5018eb9",
+    "description": "FFmpeg nightly build for yt-dlp.",
     "homepage": "https://github.com/yt-dlp/FFmpeg-Builds",
     "license": "MIT",
     "suggest": {
@@ -16,39 +16,36 @@
             "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-11-27-14-16/ffmpeg-N-121910-gcac5018eb9-win32-gpl.zip",
             "hash": "315879ddc8214093b1378a6629de4eb95a06802a6e7d62a4513c8d5201e95c21",
             "extract_dir": "ffmpeg-N-121910-gcac5018eb9-win32-gpl"
+        },
+        "arm64": {
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-11-27-14-16/ffmpeg-N-121910-gcac5018eb9-winarm64-gpl.zip",
+            "hash": "bcdb0d08311e0823331f5cc171c13ed993e29e685617e62cbf6798fbdb8ca4be",
+            "extract_dir": "ffmpeg-N-121910-gcac5018eb9-winarm64-gpl"
         }
     },
     "checkver": {
-        "script": [
-            "# 32-bit file is either listed above or below the 64-bit one. Therefore we need a checkver script to match it.",
-            "$url = 'https://api.github.com/repositories/377430603/releases'",
-            "$regex_64bit = 'autobuild-(?<buildtime>(?<builddate>\\d{4}-\\d{2}-\\d{2})-\\d{2}-\\d{2})/(?<filename>ffmpeg-N-(?<ffmpegver>[\\d.-]+-\\w+)-win64-gpl)\\.zip'",
-            "$regex_32bit = $regex_64bit.replace('win64', 'win32')",
-            "$cont = $(Invoke-WebRequest($url)).Content | ConvertFrom-Json",
-            "$file_urls = @()",
-            "$cont[1].assets | ForEach-Object { $file_urls += $_.browser_download_url }",
-            "$file_urls | ForEach-Object {",
-            "    if ($_ -match $regex_64bit) {",
-            "        $ffmpegver = $matches.ffmpegver",
-            "        $buildtime = $matches.buildtime",
-            "        $builddate = $matches.builddate.Replace('-', '')",
-            "        $filename64bit = $matches.filename",
-            "    } elseif ($_ -match $regex_32bit) { $filename32bit = $matches.filename }",
-            "}",
-            "Write-Output $ffmpegver-$builddate $buildtime $filename64bit $filename32bit"
-        ],
-        "regex": "([\\w.-]+) (?<buildtime>[\\w.-]+) (?<filename64bit>[\\w.-]+) (?<filename32bit>[\\w.-]+)"
+        "url": "https://api.github.com/repositories/377430603/releases",
+        "jsonpath": "$..assets[?(@.browser_download_url =~ /ffmpeg-N-\\d+-g[0-9a-f]+-win64-gpl\\.zip/i)].browser_download_url",
+        "regex": "autobuild-(?<buildtime>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[\\d-]+)/ffmpeg-N-(?<commitnum>\\d+)-g(?<commithash>[0-9a-f]+)-win64-gpl\\.zip",
+        "replace": "${year}${month}${day}-${commitnum}-g${commithash}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-$matchBuildtime/$matchFilename64bit.zip",
-                "extract_dir": "$matchFilename64bit"
+                "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-$matchBuildtime/ffmpeg-N-$matchCommitnum-g$matchCommithash-win64-gpl.zip",
+                "extract_dir": "ffmpeg-N-$matchCommitnum-g$matchCommithash-win64-gpl"
             },
             "32bit": {
-                "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-$matchBuildtime/$matchFilename32bit.zip",
-                "extract_dir": "$matchFilename32bit"
+                "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-$matchBuildtime/ffmpeg-N-$matchCommitnum-g$matchCommithash-win32-gpl.zip",
+                "extract_dir": "ffmpeg-N-$matchCommitnum-g$matchCommithash-win32-gpl"
+            },
+            "arm64": {
+                "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-$matchBuildtime/ffmpeg-N-$matchCommitnum-g$matchCommithash-winarm64-gpl.zip",
+                "extract_dir": "ffmpeg-N-$matchCommitnum-g$matchCommithash-winarm64-gpl"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.sha256"
         }
     }
 }
