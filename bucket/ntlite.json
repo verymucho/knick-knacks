@@ -48,7 +48,7 @@
                 "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe"
             },
             "32bit": {
-                "url": "https://downloads.ntlite.com/files/NTLite_setup_x86.exe"
+                "url": "https://downloads.ntlite.com/files/NTLite_setup_x86_legacy.exe"
             }
         },
         "hash": {
