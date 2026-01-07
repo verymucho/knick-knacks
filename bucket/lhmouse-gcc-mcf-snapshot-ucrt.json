@@ -1,12 +1,12 @@
 {
     "homepage": "https://gcc-mcf.lhmouse.com",
     "description": "MinGW-w64 GCC build with UCRT and the MCF thread model (Snapshot version)",
-    "version": "16.0.0-20251222-ucrt",
+    "version": "16.0.0-20260106-ucrt",
     "license": "GPL-2.0-only,LGPL-3.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20251222_16.0.0_x64-ucrt_760c6cc18999a1350c582b196199ef62efda4e7b.7z",
-            "hash": "sha1:760c6cc18999a1350c582b196199ef62efda4e7b",
+            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20260106_16.0.0_x64-ucrt_bdc7c3b5665d9ef6c3ecfa8015d3899910fcc9f5.7z",
+            "hash": "sha1:bdc7c3b5665d9ef6c3ecfa8015d3899910fcc9f5",
             "extract_dir": "ucrt64"
         }
     },
