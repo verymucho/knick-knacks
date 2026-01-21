@@ -1,12 +1,12 @@
 {
-    "version": "5.4.8.202601211944",
+    "version": "5.4.8.202601212029",
     "description": "A Qt/C++ front-end to yt-dlp, youtube-dl, gallery-dl, lux, you-get, svtplay-dl, aria2c, wget and safari books.",
     "homepage": "https://github.com/mhogomchungu/media-downloader",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/mhogomchungu/media-downloader-git/releases/download/0.0.0/MediaDownloaderQt6.git.zip",
-            "hash": "a7b50f3ea8fc16ff01e60aa51d66fb51e7a3d71954282de42f6df2e3e9ad1dba",
+            "hash": "8f4126404aef88ab675415415ace75892f950ecd951724e22864c5e23bb24f49",
             "extract_dir": "MediaDownloaderQt6.git"
         }
     },
