@@ -10,8 +10,8 @@
                 "https://github.com/vegidio/umd-app/releases/download/25.12.1/umd-cli_windows_amd64.zip"
             ],
             "hash": [
-                "1a0fb5756e0e74fb8a9193398087aea7eda33ad73c6fc8a654d5028c635afeef",
-                "75e0db3438cffcf24cd00e367cc47677d337c253c5f2f1e08e244bcdf6962e83"
+                "abbcc5e9c81acfa2b818e8310bf3256ab722951364325b1795e81d5acdebe9a1",
+                "5cccc4d00daf5c764d1d1723df5c5de4c4b58d84ae5e720bdb0a38b81dce9dd3"
             ]
         },
         "arm64": {
@@ -20,8 +20,8 @@
                 "https://github.com/vegidio/umd-app/releases/download/25.12.1/umd-cli_windows_arm64.zip"
             ],
             "hash": [
-                "1962e68538e91769fc29d4ea370b78abf116c5cb0d13f0e0711c6d53f4461d09",
-                "926b307f13513d43712fb6f873de36bf532e9fc0bd6e762feea4fe142b867dda"
+                "da24ed8565f9a80a2823c9e64f4d83b5523a92e4ef155bed168123377852f096",
+                "075bdf545fb8b627b2d273b9eb97bd2433f5d203efb5e6eae1f2faeafcb7508e"
             ]
         }
     },
