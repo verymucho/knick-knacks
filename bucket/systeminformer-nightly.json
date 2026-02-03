@@ -18,8 +18,14 @@
         }
     },
     "pre_install": [
-        "ensure \"$persist_dir\" | Out-Null",
-        "'SystemInformer.exe.settings.json', 'usernotesdb.xml' | ForEach-Object { Copy-Item \"$persist_dir\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' }"
+        "# Hardlink cannot be used here, as System Informer would create a new file instead of writing directly.",
+        "'SystemInformer.exe.settings.json', 'usernotesdb.xml' | ForEach-Object {",
+        "    if (-not (Test-Path \"$persist_dir\\$_\")) {",
+        "        New-Item \"$dir\\$_\" -ItemType File | Out-Null",
+        "    } else {",
+        "        Copy-Item \"$persist_dir\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue'",
+        "    }",
+        "}"
     ],
     "shortcuts": [
         [
@@ -28,8 +34,10 @@
         ]
     ],
     "pre_uninstall": [
-        "ensure \"$persist_dir\" | Out-Null",
-        "'SystemInformer.exe.settings.json', 'usernotesdb.xml' | ForEach-Object { Copy-Item \"$dir\\$_\" \"$persist_dir\\$_\" -ErrorAction 'SilentlyContinue' }"
+        "ensure $persist_dir",
+        "'SystemInformer.exe.settings.json', 'usernotesdb.xml' | ForEach-Object {",
+        "    Copy-Item \"$dir\\$_\" \"$persist_dir\\$_\" -ErrorAction 'SilentlyContinue'",
+        "}"
     ],
     "checkver": {
         "github": "https://github.com/winsiderss/si-builds"
