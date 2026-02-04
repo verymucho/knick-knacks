@@ -1,5 +1,5 @@
 {
-    "version": "2025.12.16",
+    "version": "2026.02.04",
     "description": "A set of utilities to manage, diagnose, troubleshoot, and monitor a Windows environment.",
     "homepage": "https://learn.microsoft.com/sysinternals",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://download.sysinternals.com/files/SysinternalsSuite.zip",
-            "hash": "a0ece4c52ee9c71c3c02038245d3e0b3c6150fff0e26bd7bdf882fc7ee54cf69",
+            "hash": "1efa388c6d244e2d20df99ea1f4f48b5c38990d8a978bc334de51f374bc16c4c",
             "pre_install": "Get-ChildItem -Path \"$dir\" | Move-Item -Destination { $_.FullName -replace '64','' } -Force",
             "bin": [
                 "accesschk.exe",
@@ -25,6 +25,7 @@
                 "Clockres.exe",
                 "Contig.exe",
                 "Coreinfo.exe",
+                "CoreinfoEx.exe",
                 "CPUSTRES.EXE",
                 "ctrl2cap.exe",
                 "dbgview.exe",
@@ -126,6 +127,11 @@
                     "/accepteula"
                 ],
                 [
+                    "CoreinfoEx.exe",
+                    "SysInternals/Coreinfo - Dump information on system CPU and memory topology",
+                    "/accepteula"
+                ],
+                [
                     "CPUSTRES.EXE",
                     "SysInternals/CPU Stress - Simulate CPU activity by running up to 64 threads in a tight loop",
                     "/accepteula"
@@ -223,7 +229,7 @@
         },
         "32bit": {
             "url": "https://download.sysinternals.com/files/SysinternalsSuite.zip",
-            "hash": "a0ece4c52ee9c71c3c02038245d3e0b3c6150fff0e26bd7bdf882fc7ee54cf69",
+            "hash": "1efa388c6d244e2d20df99ea1f4f48b5c38990d8a978bc334de51f374bc16c4c",
             "bin": [
                 "accesschk.exe",
                 "AccessEnum.exe",
@@ -238,6 +244,7 @@
                 "Clockres.exe",
                 "Contig.exe",
                 "Coreinfo.exe",
+                "CoreinfoEx.exe",
                 "CPUSTRES.EXE",
                 "ctrl2cap.exe",
                 "Dbgview.exe",
@@ -339,6 +346,11 @@
                     "/accepteula"
                 ],
                 [
+                    "CoreinfoEx.exe",
+                    "SysInternals/Coreinfo - Dump information on system CPU and memory topology",
+                    "/accepteula"
+                ],
+                [
                     "CPUSTRES.EXE",
                     "SysInternals/CPU Stress - Simulate CPU activity by running up to 64 threads in a tight loop",
                     "/accepteula"
@@ -436,7 +448,7 @@
         },
         "arm64": {
             "url": "https://download.sysinternals.com/files/SysinternalsSuite-ARM64.zip",
-            "hash": "0d29363fd878c00f50219bd638ce2df960b9c93fe800b31230a11a3f120a3095",
+            "hash": "df69341b7f8a11e2925b8e261a165766681aa7fa4b5f336dd3b224dd62b8062e",
             "bin": [
                 [
                     "accesschk64a.exe",
@@ -477,6 +489,10 @@
                 [
                     "Coreinfo64a.exe",
                     "Coreinfo"
+                ],
+                [
+                    "CoreinfoEx64a.exe",
+                    "CoreinfoEx"
                 ],
                 [
                     "Dbgview64a.exe",
@@ -682,6 +698,11 @@
                 [
                     "Autoruns64a.exe",
                     "SysInternals/Autoruns - View startup programs and processes"
+                ],
+                [
+                    "CoreinfoEx64a.exe",
+                    "SysInternals/Coreinfo - Dump information on system CPU and memory topology",
+                    "/accepteula"
                 ],
                 [
                     "Dbgview64a.exe",
