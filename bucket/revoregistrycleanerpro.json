@@ -18,10 +18,15 @@
         "settings.dat"
     ],
     "checkver": {
-        "url": "https://www.revouninstaller.com/revo-registry-cleaner-pro-version-history/",
-        "regex": "href=\"https:\\/\\/(?<dlurl>.+)\\/RRC_ProPortable\\.zip\">PORTABLE\\s([\\d.]+)"
+        "script": [
+            "$base_url = 'https://www.revouninstaller.com/revo-registry-cleaner-pro-version-history/'",
+            "$page = Invoke-WebRequest $base_url -UseBasicParsing",
+            "$dl_page = $page.Links.Where({ $_ -match 'RRC_ProPortable.zip' }, 1) | Select-Object -ExpandProperty outerHTML",
+            "$dl_page"
+        ],
+        "regex": "href=\"https://(?<path>.*?)/RRC_ProPortable.zip\".PORTABLE\\s([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://$matchDlurl/RRC_ProPortable.zip"
+        "url": "https://$matchPath/RRC_ProPortable.zip"
     }
 }
