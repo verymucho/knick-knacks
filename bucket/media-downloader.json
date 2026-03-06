@@ -1,18 +1,18 @@
 {
-    "version": "5.4.8",
+    "version": "5.4.9",
     "description": "A Qt/C++ front-end to yt-dlp, youtube-dl, gallery-dl, lux, you-get, svtplay-dl, aria2c, wget and safari books.",
     "homepage": "https://github.com/mhogomchungu/media-downloader",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mhogomchungu/media-downloader/releases/download/5.4.8/MediaDownloaderQt6-5.4.8.zip",
-            "hash": "2854843cde1c4a3e9976439c1c048bee655f7beae58020c7942602cc98a96a1c",
-            "extract_dir": "MediaDownloaderQt6-5.4.8"
+            "url": "https://github.com/mhogomchungu/media-downloader/releases/download/5.4.9/MediaDownloaderQt6-5.4.9.zip",
+            "hash": "471be4e3b0a463ef2e553fb32cb5e60bb2c113795538cbfcffa8dce50fac8c86",
+            "extract_dir": "MediaDownloaderQt6-5.4.9"
         },
         "32bit": {
-            "url": "https://github.com/mhogomchungu/media-downloader/releases/download/5.4.8/MediaDownloaderQt5-5.4.8.zip",
-            "hash": "df4b5896b969f33d703f8f0a9c911aea134af1f1410fa6854a477822fb65c8c2",
-            "extract_dir": "MediaDownloaderQt5-5.4.8"
+            "url": "https://github.com/mhogomchungu/media-downloader/releases/download/5.4.9/MediaDownloaderQt5-5.4.9.zip",
+            "hash": "6cb0e80e0ffff423d9809d4891cf239d8f75b04aa78afbe6b0814f4378eccffb",
+            "extract_dir": "MediaDownloaderQt5-5.4.9"
         }
     },
     "shortcuts": [
