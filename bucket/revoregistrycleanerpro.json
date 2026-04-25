@@ -24,7 +24,7 @@
             "$dl_page = $page.Links.Where({ $_ -match 'RRC_ProPortable.zip' }, 1) | Select-Object -ExpandProperty outerHTML",
             "$dl_page"
         ],
-        "regex": "href=\"https://(?<path>.*?)/RRC_ProPortable.zip\".PORTABLE\\s([\\d.]+)"
+        "regex": "href=\"https://(?<path>.*?)/RRC_ProPortable.zip\".+PORTABLE\\s([\\d.]+)\\s"
     },
     "autoupdate": {
         "url": "https://$matchPath/RRC_ProPortable.zip"
