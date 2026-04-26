@@ -40,7 +40,7 @@
     ],
     "checkver": {
         "url": "https://www.ntlite.com/download/",
-        "regex": "\\>v([\\d.]+)"
+        "regex": "\\>v\\D+([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
