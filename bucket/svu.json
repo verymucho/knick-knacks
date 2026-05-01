@@ -1,16 +1,16 @@
 {
-    "version": "3.4.0",
+    "version": "3.4.1",
     "description": "semantic version utility",
     "homepage": "https://github.com/caarlos0/svu",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/caarlos0/svu/releases/download/v3.4.0/svu_3.4.0_windows_amd64.zip",
-            "hash": "e0970676993787121f143d7d33b07e59eae5770c35269ceef53464144403fd2f"
+            "url": "https://github.com/caarlos0/svu/releases/download/v3.4.1/svu_3.4.1_windows_amd64.zip",
+            "hash": "7f8d17beb8fbe4a5c6e232072e93a71c8338173dafd95eda898bd1838d12b14e"
         },
         "arm64": {
-            "url": "https://github.com/caarlos0/svu/releases/download/v3.4.0/svu_3.4.0_windows_arm64.zip",
-            "hash": "325be895d8a0acef674c676c37a80d80140599b51dd68cc2dcd76e992e087c84"
+            "url": "https://github.com/caarlos0/svu/releases/download/v3.4.1/svu_3.4.1_windows_arm64.zip",
+            "hash": "6c8bad795350dc1c9a8bd948486c6528bfff4629c769e9a7a66e530c4e9b64f5"
         }
     },
     "installer": {
