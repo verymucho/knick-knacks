@@ -5,15 +5,9 @@
     "license": "GPL-2.0",
     "url": "https://github.com/xemulat/XToolbox/releases/download/v5.0/XTBox.exe",
     "hash": "9dfedc5111924a77d1290fd15258815d6c53e25a693d6172ed0df7c248919a67",
-    "bin": [
-        "xtbox.exe",
-        [
-            "xtbox.exe",
-            "xtoolbox"
-        ]
-    ],
+    "bin": "xtoolbox.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/xemulat/XToolbox/releases/download/v$version/XTBox.exe"
+        "url": "https://github.com/xemulat/XToolbox/releases/download/v$version/Release.zip"
     }
 }
