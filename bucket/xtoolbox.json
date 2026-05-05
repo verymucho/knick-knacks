@@ -5,7 +5,12 @@
     "license": "GPL-2.0",
     "url": "https://github.com/xemulat/XToolbox/releases/download/v5.1/Release.zip",
     "hash": "d0d8447e7ef31dd956bc9511d23ec4781bc05ccc1612c015c9253c9af0f1e5ed",
-    "bin": "xtoolbox.exe",
+    "shortcuts": [
+        [
+            "xtoolbox.exe",
+            "XToolbox"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/xemulat/XToolbox/releases/download/v$version/Release.zip"
