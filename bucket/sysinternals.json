@@ -12,84 +12,261 @@
             "hash": "e45ce0b3fd6d0457e253f132ef086c6c4715def16e59433de2cb5dfe2c16a76f",
             "pre_install": "Get-ChildItem -Path \"$dir\" | Move-Item -Destination { $_.FullName -replace '64','' } -Force",
             "bin": [
-                "accesschk.exe",
-                "AccessEnum.exe",
-                "ADExplorer.exe",
-                "ADInsight.exe",
-                "adrestore.exe",
-                "Autologon.exe",
-                "Autoruns.exe",
-                "autorunsc.exe",
-                "Bginfo.exe",
-                "Cacheset.exe",
-                "Clockres.exe",
-                "Contig.exe",
-                "Coreinfo.exe",
-                "CoreinfoEx.exe",
-                "CPUSTRES.EXE",
-                "ctrl2cap.exe",
-                "dbgview.exe",
-                "Desktops.exe",
-                "disk2vhd.exe",
-                "diskext.exe",
-                "Diskmon.exe",
-                "DiskView.exe",
-                "du.exe",
-                "efsdump.exe",
-                "FindLinks.exe",
-                "handle.exe",
-                "hex2dec.exe",
-                "junction.exe",
-                "ldmdump.exe",
-                "Listdlls.exe",
-                "livekd.exe",
-                "LoadOrd.exe",
-                "LoadOrdC.exe",
-                "logonsessions.exe",
-                "movefile.exe",
-                "notmyfault.exe",
-                "notmyfaultc.exe",
-                "ntfsinfo.exe",
-                "pendmoves.exe",
-                "pipelist.exe",
-                "portmon.exe",
-                "procdump.exe",
-                "procexp.exe",
-                "Procmon.exe",
-                "PsExec.exe",
-                "psfile.exe",
-                "PsGetsid.exe",
-                "PsInfo.exe",
-                "pskill.exe",
-                "pslist.exe",
-                "PsLoggedon.exe",
-                "psloglist.exe",
-                "pspasswd.exe",
-                "psping.exe",
-                "PsService.exe",
-                "psshutdown.exe",
-                "pssuspend.exe",
-                "RAMMap.exe",
-                "RDCMan.exe",
-                "RegDelNull.exe",
-                "regjump.exe",
-                "ru.exe",
-                "sdelete.exe",
-                "ShareEnum.exe",
-                "ShellRunas.exe",
-                "sigcheck.exe",
-                "streams.exe",
-                "strings.exe",
-                "sync.exe",
-                "Sysmon.exe",
-                "tcpvcon.exe",
-                "tcpview.exe",
-                "Testlimit.exe",
-                "vmmap.exe",
-                "Volumeid.exe",
-                "whois.exe",
-                "Winobj.exe",
-                "ZoomIt.exe"
+                [
+                    "accesschk.exe",
+                    "accesschk",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "adrestore.exe",
+                    "adrestore",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "autorunsc.exe",
+                    "autorunsc",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Clockres.exe",
+                    "Clockres",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Contig.exe",
+                    "Contig",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Coreinfo.exe",
+                    "Coreinfo",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ctrl2cap.exe",
+                    "ctrl2cap",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "diskext.exe",
+                    "diskext",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "du.exe",
+                    "du",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "efsdump.exe",
+                    "efsdump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "FindLinks.exe",
+                    "FindLinks",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "handle.exe",
+                    "handle",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "hex2dec.exe",
+                    "hex2dec",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "junction.exe",
+                    "junction",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ldmdump.exe",
+                    "ldmdump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Listdlls.exe",
+                    "Listdlls",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "livekd.exe",
+                    "livekd",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "LoadOrdC.exe",
+                    "LoadOrdC",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "logonsessions.exe",
+                    "logonsessions",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "movefile.exe",
+                    "movefile",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "notmyfaultc.exe",
+                    "notmyfaultc",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ntfsinfo.exe",
+                    "ntfsinfo",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pendmoves.exe",
+                    "pendmoves",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pipelist.exe",
+                    "pipelist",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "procdump.exe",
+                    "procdump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsExec.exe",
+                    "PsExec",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psfile.exe",
+                    "psfile",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsGetsid.exe",
+                    "PsGetsid",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsInfo.exe",
+                    "PsInfo",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pskill.exe",
+                    "pskill",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pslist.exe",
+                    "pslist",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsLoggedon.exe",
+                    "PsLoggedon",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psloglist.exe",
+                    "psloglist",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pspasswd.exe",
+                    "pspasswd",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psping.exe",
+                    "psping",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsService.exe",
+                    "PsService",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psshutdown.exe",
+                    "psshutdown",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pssuspend.exe",
+                    "pssuspend",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "RegDelNull.exe",
+                    "RegDelNull",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "regjump.exe",
+                    "regjump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ru.exe",
+                    "ru",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "sdelete.exe",
+                    "sdelete",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "sigcheck.exe",
+                    "sigcheck",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "streams.exe",
+                    "streams",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "strings.exe",
+                    "strings",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "sync.exe",
+                    "sync",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Sysmon.exe",
+                    "Sysmon",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "tcpvcon.exe",
+                    "tcpvcon",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Testlimit.exe",
+                    "Testlimit",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Volumeid.exe",
+                    "Volumeid",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "whois.exe",
+                    "whois",
+                    "-accepteula -nobanner"
+                ]
             ],
             "shortcuts": [
                 [
@@ -231,84 +408,261 @@
             "url": "https://download.sysinternals.com/files/SysinternalsSuite.zip",
             "hash": "e45ce0b3fd6d0457e253f132ef086c6c4715def16e59433de2cb5dfe2c16a76f",
             "bin": [
-                "accesschk.exe",
-                "AccessEnum.exe",
-                "ADExplorer.exe",
-                "ADInsight.exe",
-                "adrestore.exe",
-                "Autologon.exe",
-                "Autoruns.exe",
-                "autorunsc.exe",
-                "Bginfo.exe",
-                "Cacheset.exe",
-                "Clockres.exe",
-                "Contig.exe",
-                "Coreinfo.exe",
-                "CoreinfoEx.exe",
-                "CPUSTRES.EXE",
-                "ctrl2cap.exe",
-                "Dbgview.exe",
-                "Desktops.exe",
-                "disk2vhd.exe",
-                "diskext.exe",
-                "Diskmon.exe",
-                "DiskView.exe",
-                "du.exe",
-                "efsdump.exe",
-                "FindLinks.exe",
-                "handle.exe",
-                "hex2dec.exe",
-                "junction.exe",
-                "ldmdump.exe",
-                "Listdlls.exe",
-                "livekd.exe",
-                "LoadOrd.exe",
-                "LoadOrdC.exe",
-                "logonsessions.exe",
-                "movefile.exe",
-                "notmyfault.exe",
-                "notmyfaultc.exe",
-                "ntfsinfo.exe",
-                "pendmoves.exe",
-                "pipelist.exe",
-                "portmon.exe",
-                "procdump.exe",
-                "procexp.exe",
-                "Procmon.exe",
-                "PsExec.exe",
-                "psfile.exe",
-                "PsGetsid.exe",
-                "PsInfo.exe",
-                "pskill.exe",
-                "pslist.exe",
-                "PsLoggedon.exe",
-                "psloglist.exe",
-                "pspasswd.exe",
-                "psping.exe",
-                "PsService.exe",
-                "psshutdown.exe",
-                "pssuspend.exe",
-                "RAMMap.exe",
-                "RDCMan-x86.exe",
-                "RegDelNull.exe",
-                "regjump.exe",
-                "ru.exe",
-                "sdelete.exe",
-                "ShareEnum.exe",
-                "ShellRunas.exe",
-                "sigcheck.exe",
-                "streams.exe",
-                "strings.exe",
-                "sync.exe",
-                "Sysmon.exe",
-                "tcpvcon.exe",
-                "tcpview.exe",
-                "Testlimit.exe",
-                "vmmap.exe",
-                "Volumeid.exe",
-                "whois.exe",
-                "Winobj.exe",
-                "ZoomIt.exe"
+                [
+                    "accesschk.exe",
+                    "accesschk",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "adrestore.exe",
+                    "adrestore",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "autorunsc.exe",
+                    "autorunsc",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Clockres.exe",
+                    "Clockres",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Contig.exe",
+                    "Contig",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Coreinfo.exe",
+                    "Coreinfo",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ctrl2cap.exe",
+                    "ctrl2cap",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "diskext.exe",
+                    "diskext",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "du.exe",
+                    "du",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "efsdump.exe",
+                    "efsdump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "FindLinks.exe",
+                    "FindLinks",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "handle.exe",
+                    "handle",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "hex2dec.exe",
+                    "hex2dec",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "junction.exe",
+                    "junction",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ldmdump.exe",
+                    "ldmdump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Listdlls.exe",
+                    "Listdlls",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "livekd.exe",
+                    "livekd",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "LoadOrdC.exe",
+                    "LoadOrdC",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "logonsessions.exe",
+                    "logonsessions",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "movefile.exe",
+                    "movefile",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "notmyfaultc.exe",
+                    "notmyfaultc",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ntfsinfo.exe",
+                    "ntfsinfo",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pendmoves.exe",
+                    "pendmoves",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pipelist.exe",
+                    "pipelist",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "procdump.exe",
+                    "procdump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsExec.exe",
+                    "PsExec",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psfile.exe",
+                    "psfile",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsGetsid.exe",
+                    "PsGetsid",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsInfo.exe",
+                    "PsInfo",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pskill.exe",
+                    "pskill",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pslist.exe",
+                    "pslist",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsLoggedon.exe",
+                    "PsLoggedon",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psloglist.exe",
+                    "psloglist",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pspasswd.exe",
+                    "pspasswd",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psping.exe",
+                    "psping",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "PsService.exe",
+                    "PsService",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "psshutdown.exe",
+                    "psshutdown",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "pssuspend.exe",
+                    "pssuspend",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "RegDelNull.exe",
+                    "RegDelNull",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "regjump.exe",
+                    "regjump",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "ru.exe",
+                    "ru",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "sdelete.exe",
+                    "sdelete",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "sigcheck.exe",
+                    "sigcheck",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "streams.exe",
+                    "streams",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "strings.exe",
+                    "strings",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "sync.exe",
+                    "sync",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Sysmon.exe",
+                    "Sysmon",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "tcpvcon.exe",
+                    "tcpvcon",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Testlimit.exe",
+                    "Testlimit",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "Volumeid.exe",
+                    "Volumeid",
+                    "-accepteula -nobanner"
+                ],
+                [
+                    "whois.exe",
+                    "whois",
+                    "-accepteula -nobanner"
+                ]
             ],
             "shortcuts": [
                 [
@@ -452,231 +806,188 @@
             "bin": [
                 [
                     "accesschk64a.exe",
-                    "accesschk"
-                ],
-                [
-                    "ADExplorer64a.exe",
-                    "ADExplorer"
-                ],
-                [
-                    "ADInsight64a.exe",
-                    "ADInsight"
+                    "accesschk",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "adrestore64a.exe",
-                    "adrestore"
-                ],
-                [
-                    "Autologon64a.exe",
-                    "Autologon"
-                ],
-                [
-                    "Autoruns64a.exe",
-                    "Autoruns"
+                    "adrestore",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "autorunsc64a.exe",
-                    "autorunsc"
+                    "autorunsc",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "Clockres64a.exe",
-                    "Clockres"
+                    "Clockres",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "Contig64a.exe",
-                    "Contig"
+                    "Contig",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "Coreinfo64a.exe",
-                    "Coreinfo"
-                ],
-                [
-                    "CoreinfoEx64a.exe",
-                    "CoreinfoEx"
-                ],
-                [
-                    "Dbgview64a.exe",
-                    "Dbgview"
-                ],
-                [
-                    "disk2vhd64a.exe",
-                    "disk2vhd"
+                    "Coreinfo",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "diskext64a.exe",
-                    "diskext"
-                ],
-                [
-                    "DiskView64a.exe",
-                    "DiskView"
+                    "diskext",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "du64a.exe",
-                    "du"
+                    "du",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "FindLinks64a.exe",
-                    "FindLinks"
+                    "FindLinks",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "handle64a.exe",
-                    "handle"
+                    "handle",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "hex2dec64a.exe",
-                    "hex2dec"
+                    "hex2dec",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "junction64a.exe",
-                    "junction"
-                ],
-                [
-                    "LoadOrd64a.exe",
-                    "LoadOrd"
-                ],
-                [
-                    "LoadOrdC64a.exe",
-                    "LoadOrdC"
+                    "junction",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "logonsessions64a.exe",
-                    "logonsessions"
+                    "logonsessions",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "movefile64a.exe",
-                    "movefile"
-                ],
-                [
-                    "notmyfault64a.exe",
-                    "notmyfault"
-                ],
-                [
-                    "notmyfaultc64a.exe",
-                    "notmyfaultc"
+                    "movefile",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "pendmoves64a.exe",
-                    "pendmoves"
+                    "pendmoves",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "pipelist64a.exe",
-                    "pipelist"
+                    "pipelist",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "procdump64a.exe",
-                    "procdump"
-                ],
-                [
-                    "procexp64a.exe",
-                    "procexp"
-                ],
-                [
-                    "Procmon64a.exe",
-                    "Procmon"
+                    "procdump",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "PsExec64a.exe",
-                    "PsExec"
+                    "PsExec",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "psfile64a.exe",
-                    "psfile"
+                    "psfile",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "PsGetsid64a.exe",
-                    "PsGetsid"
+                    "PsGetsid",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "PsInfo64a.exe",
-                    "PsInfo"
+                    "PsInfo",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "pskill64a.exe",
-                    "pskill"
+                    "pskill",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "pslist64a.exe",
-                    "pslist"
+                    "pslist",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "psloglist64a.exe",
-                    "psloglist"
+                    "psloglist",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "pspasswd64a.exe",
-                    "pspasswd"
+                    "pspasswd",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "psping64a.exe",
-                    "psping"
+                    "psping",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "PsService64a.exe",
-                    "PsService"
+                    "PsService",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "pssuspend64a.exe",
-                    "pssuspend"
-                ],
-                [
-                    "RAMMap64a.exe",
-                    "RAMMap"
+                    "pssuspend",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "RegDelNull64a.exe",
-                    "RegDelNull"
+                    "RegDelNull",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "ru64a.exe",
-                    "ru"
-                ],
-                [
-                    "sdelete64a.exe",
-                    "sdelete"
+                    "ru",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "sigcheck64a.exe",
-                    "sigcheck"
+                    "sigcheck",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "streams64a.exe",
-                    "streams"
+                    "streams",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "strings64a.exe",
-                    "strings"
+                    "strings",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "sync64a.exe",
-                    "sync"
+                    "sync",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "Sysmon64a.exe",
-                    "Sysmon"
+                    "Sysmon",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "tcpvcon64a.exe",
-                    "tcpvcon"
-                ],
-                [
-                    "tcpview64a.exe",
-                    "tcpview"
-                ],
-                [
-                    "vmmap64a.exe",
-                    "vmmap.exe"
+                    "tcpvcon",
+                    "-accepteula -nobanner"
                 ],
                 [
                     "whois64a.exe",
-                    "whois"
-                ],
-                [
-                    "Winobj64a.exe",
-                    "Winobj"
-                ],
-                [
-                    "ZoomIt64a.exe",
-                    "ZoomIt"
+                    "whois",
+                    "-accepteula -nobanner"
                 ]
             ],
             "shortcuts": [
