@@ -1,0 +1,47 @@
+{
+    "version": "5.2.0",
+    "description": "Connect to remote ffmpeg servers.",
+    "homepage": "https://github.com/steelbrain/ffmpeg-over-ip",
+    "license": "MIT|GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/steelbrain/ffmpeg-over-ip/releases/download/v5.2.0/windows-amd64-ffmpeg-over-ip-client.zip",
+                "https://github.com/steelbrain/ffmpeg-over-ip/releases/download/v5.2.0/windows-amd64-ffmpeg-over-ip-server.zip"
+            ],
+            "hash": [
+                "991cd3b3eb0387b2ebbc83b7f2a1a5fdfd9c5655a7c111ba5b3d149627fbf9b3",
+                "252e2221af85e60af3775f92e13ee9c4f0b7627801b1305946eca557e6964859"
+            ]
+        }
+    },
+    "pre_install": [
+        "'ffmpeg-over-ip.server.jsonc', 'ffmpeg-over-ip.client.jsonc' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) {",
+        "        New-Item \"$dir\\$_\" -ItemType File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        "ffmpeg-over-ip-client.exe",
+        "ffmpeg-over-ip-server.exe"
+    ],
+    "persist": [
+        "ffmpeg-over-ip.server.jsonc",
+        "ffmpeg-over-ip.client.jsonc"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/steelbrain/ffmpeg-over-ip/releases/download/v$version/windows-amd64-ffmpeg-over-ip-client.zip",
+                    "https://github.com/steelbrain/ffmpeg-over-ip/releases/download/v$version/windows-amd64-ffmpeg-over-ip-server.zip"
+                ]
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
