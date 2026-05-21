@@ -1,5 +1,5 @@
 {
-    "version": "1.122.0-7d7e951",
+    "version": "1.122.0-b51c2a1",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -8,20 +8,38 @@
     },
     "notes": [
         "Add Visual Studio Code as a context menu option by running:",
-        "reg import \"$dir\\install-context.reg\"",
+        "  reg import \"$dir\\install-context.reg\"",
         "For file associations, run:",
-        "reg import \"$dir\\install-associations.reg\""
+        "  reg import \"$dir\\install-associations.reg\"",
+        "For github integration, run:",
+        "  reg import \"$dir\\install-github-integration.reg\""
     ],
     "architecture": {
         "64bit": {
-            "url": "https://vscode.download.prss.microsoft.com/dbazure/download/insider/7d7e9513af36a565ce41d60e18972bbc5cad14a2/VSCode-win32-x64-1.122.0-insider.zip",
-            "hash": "6c3df542aa244c3082c34b04e617631bfd3766e80ab63e1a18168e43535ba5d3"
+            "url": [
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/b51c2a1a37574dec35d0426b2ee9c3538c9774f4/VSCode-win32-x64-1.122.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/b51c2a1a37574dec35d0426b2ee9c3538c9774f4/vscode_cli_win32_x64_cli.zip"
+            ],
+            "hash": [
+                "a1b537ac5cfaa5eabc12957a1d6edc993f0e5d22422727eff6e3adcbc08cdaf1",
+                "d9f9eb6ce43dd1005dd5f40b5b093729c0fd22f0ecfe416e95bfefcd015e20fe"
+            ]
         },
         "arm64": {
-            "url": "https://vscode.download.prss.microsoft.com/dbazure/download/insider/7d7e9513af36a565ce41d60e18972bbc5cad14a2/VSCode-win32-arm64-1.122.0-insider.zip",
-            "hash": "93d1fa831d889d371bba01f5021945e5ab8798cb88b48d32918b32d2f01c9692"
+            "url": [
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/b51c2a1a37574dec35d0426b2ee9c3538c9774f4/VSCode-win32-arm64-1.122.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/b51c2a1a37574dec35d0426b2ee9c3538c9774f4/vscode_cli_win32_arm64_cli.zip"
+            ],
+            "hash": [
+                "3960feaa85e9a5d9bc8d02869a9cc055e68718a6b00a13dd7cc8893e6f1cceed",
+                "be5ac243213a82f13dc430204741d7edd63a0a938b65e4536d761e7fd996088a"
+            ]
         }
     },
+    "extract_to": [
+        ".",
+        "bin"
+    ],
     "post_install": [
         "$dirpath = \"$dir\".Replace('\\', '\\\\')",
         "$exepath = \"$dir\\Code - Insiders.exe\".Replace('\\', '\\\\')",
@@ -39,8 +57,8 @@
         "    $content | Set-Content -Path \"$dir\\$_.reg\"",
         "  }",
         "}",
-        "if (!(Test-Path \"$dir\\bin\\code.cmd\") -and (Test-Path \"$dir\\bin\\code-insiders.cmd\")) {",
-        "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.cmd\" -Value \"$dir\\bin\\code-insiders.cmd\" | Out-Null",
+        "if (!(Test-Path \"$dir\\bin\\code.exe\") -and (Test-Path \"$dir\\bin\\code-insiders.exe\")) {",
+        "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.exe\" -Value \"$dir\\bin\\code-insiders.exe\" | Out-Null",
         "}",
         "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.vscode-insiders\\extensions\")) {",
         "    info '[Portable Mode] Copying extensions...'",
@@ -66,10 +84,10 @@
     "persist": "data",
     "uninstaller": {
         "script": [
-            "if ($cmd -eq 'uninstall')",
-            "{",
-            "   reg import \"$dir\\uninstall-context.reg\" ",
-            "   reg import \"$dir\\uninstall-github-integration.reg\" ",
+            "if ($cmd -eq 'uninstall') {",
+            "    Get-ChildItem $dir -File -Filter uninstall-*.reg | ForEach-Object {",
+            "       reg import $_.FullName >nul 2>&1",
+            "    }",
             "}"
         ]
     },
@@ -82,16 +100,28 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://vscode.download.prss.microsoft.com/dbazure/download/insider/$matchCommit/VSCode-win32-x64-$matchHead-insider.zip",
+                "url": [
+                    "https://vscode.download.prss.microsoft.com/dbazure/download/insider/$matchCommit/VSCode-win32-x64-$matchHead-insider.zip",
+                    "https://vscode.download.prss.microsoft.com/dbazure/download/insider/$matchCommit/vscode_cli_win32_x64_cli.zip"
+                ],
                 "hash": {
-                    "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/insider/latest",
+                    "url": [
+                        "https://update.code.visualstudio.com/api/update/win32-x64-archive/insider/latest",
+                        "https://update.code.visualstudio.com/api/update/cli-win32-x64/insider/latest"
+                    ],
                     "jsonpath": "$.sha256hash"
                 }
             },
             "arm64": {
-                "url": "https://vscode.download.prss.microsoft.com/dbazure/download/insider/$matchCommit/VSCode-win32-arm64-$matchHead-insider.zip",
+                "url": [
+                    "https://vscode.download.prss.microsoft.com/dbazure/download/insider/$matchCommit/VSCode-win32-arm64-$matchHead-insider.zip",
+                    "https://vscode.download.prss.microsoft.com/dbazure/download/insider/$matchCommit/vscode_cli_win32_arm64_cli.zip"
+                ],
                 "hash": {
-                    "url": "https://update.code.visualstudio.com/api/update/win32-arm64-archive/insider/latest",
+                    "url": [
+                        "https://update.code.visualstudio.com/api/update/win32-arm64-archive/insider/latest",
+                        "https://update.code.visualstudio.com/api/update/cli-win32-arm64/insider/latest"
+                    ],
                     "jsonpath": "$.sha256hash"
                 }
             }
