@@ -1,0 +1,26 @@
+{
+    "version": "0.6.1",
+    "description": "Integrated ssh-agent for Windows.",
+    "homepage": "https://github.com/masahide/OmniSSHAgent",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v0.6.1/OmniSSHAgent.zip",
+            "hash": "d0f557f9e9a13aefb0c4c89c0d5bdb14745ef037b0d3eac7fe64848a573a2ca0"
+        }
+    },
+    "shortcuts": [
+        [
+            "OmniSSHAgent.exe",
+            "OmniSSHAgent"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v$version/OmniSSHAgent.zip"
+            }
+        }
+    }
+}
