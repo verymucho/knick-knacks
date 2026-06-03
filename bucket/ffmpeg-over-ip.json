@@ -15,20 +15,25 @@
             ]
         }
     },
+    "extract_to": [
+        "client",
+        "server"
+    ],
     "pre_install": [
-        "'ffmpeg-over-ip.server.jsonc', 'ffmpeg-over-ip.client.jsonc' | ForEach-Object {",
+        "'client\\ffmpeg-over-ip.client.jsonc', 'server\\ffmpeg-over-ip.server.jsonc' | ForEach-Object {",
         "    if (!(Test-Path \"$persist_dir\\$_\")) {",
         "        New-Item \"$dir\\$_\" -ItemType File | Out-Null",
         "    }",
         "}"
     ],
+    "post_install": [ "New-Item -ItemType SymbolicLink -Path \"$dir\\client\\ffprobe.exe\" -Value \"$dir\\client\\ffmpeg-over-ip-client.exe\" | Out-Null" ],
     "bin": [
-        "ffmpeg-over-ip-client.exe",
-        "ffmpeg-over-ip-server.exe"
+        "client\\ffmpeg-over-ip-client.exe",
+        "server\\ffmpeg-over-ip-server.exe"
     ],
     "persist": [
-        "ffmpeg-over-ip.server.jsonc",
-        "ffmpeg-over-ip.client.jsonc"
+        "client\\ffmpeg-over-ip.client.jsonc",
+        "server\\ffmpeg-over-ip.server.jsonc"
     ],
     "checkver": "github",
     "autoupdate": {
