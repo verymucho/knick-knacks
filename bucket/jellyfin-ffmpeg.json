@@ -1,5 +1,5 @@
 {
-    "version": "7.1.4-1",
+    "version": "7.1.4-2",
     "description": "FFmpeg for Jellyfin",
     "homepage": "https://github.com/jellyfin/jellyfin-ffmpeg/",
     "license": "LGPL v2.1+",
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.4-1/jellyfin-ffmpeg_7.1.4-1_portable_win64-clang-gpl.zip",
-            "hash": "df1d10219e010f5d19ad9408bf70d25c4e10ecfa28f07c97228bfb15f12e7cae"
+            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.4-2/jellyfin-ffmpeg_7.1.4-2_portable_win64-clang-gpl.zip",
+            "hash": "f677b88e56641677759eacfba737c221b10d6e3e118cf14627fc208c10cadcf5"
         },
         "arm64": {
-            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.4-1/jellyfin-ffmpeg_7.1.4-1_portable_winarm64-clang-gpl.zip",
-            "hash": "de1f46c0ae06aa23e3bd4135eeba91bfc9f18566dd4a907ca09dd7a50765ffba"
+            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.4-2/jellyfin-ffmpeg_7.1.4-2_portable_winarm64-clang-gpl.zip",
+            "hash": "d6a97dcdb01a79914cedcd86cf88f17342360e729885c9dab86e8df72646d779"
         }
     },
     "bin": [
