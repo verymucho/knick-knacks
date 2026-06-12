@@ -22,7 +22,7 @@
             "bin": "TempCleaner.exe"
         }
     },
-    "checkver": "v([\\d.]+)",
+    "checkver": "Temp Cleaner v([\\d.]+)",
     "autoupdate": {
         "url": "https://www.sordum.org/files/download/temp-cleaner/TempCleaner.zip"
     }
