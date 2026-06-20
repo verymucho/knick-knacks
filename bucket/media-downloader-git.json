@@ -1,5 +1,5 @@
 {
-    "version": "5.6.1.202606191716",
+    "version": "5.6.1.202606202010",
     "description": "A Qt/C++ front-end to yt-dlp, youtube-dl, gallery-dl, lux, you-get, svtplay-dl, aria2c, wget and safari books.",
     "homepage": "https://github.com/mhogomchungu/media-downloader",
     "license": "GPL-2.0",
