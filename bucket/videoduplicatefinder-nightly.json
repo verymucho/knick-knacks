@@ -1,17 +1,49 @@
 {
-    "version": "nightly",
+    "version": "4.0-23bc624",
     "description": "Cross-platform software to find duplicated video (and image) files on hard disk based on similiarity.",
     "homepage": "https://github.com/0x90d/videoduplicatefinder",
     "license": "GPLv3",
     "suggest": {
         "ffmpeg": "ffmpeg-shared"
     },
-    "url": "https://github.com/0x90d/videoduplicatefinder/releases/download/3.0.x/App-win-x64.zip",
-    "bin": "VDF.GUI.exe",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/0x90d/videoduplicatefinder/releases/download/4.0.x/GUI-win-x64.zip",
+                "https://github.com/0x90d/videoduplicatefinder/releases/download/4.0.x/CLI-win-x64.zip"
+            ],
+            "hash": [
+                "04dcc320f0caf076af4a7316b58f3f21521fd07859d92619a11344087d6028b3",
+                "831dc05a13d265bdc571c20da37970cb9effb2ca33e3b1b1acb4c4866fac67fa"
+            ]
+        }
+    },
+    "bin": "vdf-cli.exe",
     "shortcuts": [
         [
             "VDF.GUI.exe",
             "Video Duplicate Finder"
         ]
-    ]
+    ],
+   "pre_install": "if (!(Test-Path \"$persist_dir\\Settings.json\")) { Set-Content -Encoding ASCII -Path \"$dir\\Settings.json\" -Value '{\"CustomDatabaseFolder\":\"data\"}' }",
+    "persist": [
+        "Settings.json",
+        "data"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/0x90d/videoduplicatefinder/releases/tags/4.0.x",
+        "jsonpath": "$..body",
+        "regex": "Last build based on ([0-9a-f]{7})",
+        "replace": "4.0-${1}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/0x90d/videoduplicatefinder/releases/download/4.0.x/GUI-win-x64.zip",
+                    "https://github.com/0x90d/videoduplicatefinder/releases/download/4.0.x/CLI-win-x64.zip"
+                ]
+            }
+        }
+    }
 }
