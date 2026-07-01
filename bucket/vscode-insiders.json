@@ -1,5 +1,5 @@
 {
-    "version": "1.128.0-dc92e72",
+    "version": "1.128.0-1782882786260",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -57,6 +57,7 @@
         "    $content | Set-Content -Path \"$dir\\$_.reg\"",
         "  }",
         "}",
+        "Get-ChildItem $dir -File -Filter install-*.reg | ForEach-Object { reg import $_.FullName >nul 2>&1 }",
         "if (!(Test-Path \"$dir\\bin\\code.exe\") -and (Test-Path \"$dir\\bin\\code-insiders.exe\")) {",
         "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.exe\" -Value \"$dir\\bin\\code-insiders.exe\" | Out-Null",
         "}",
@@ -93,9 +94,12 @@
     },
     "checkver": {
         "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/insider/latest",
-        "jsonpath": "$..['version', 'productVersion']",
-        "regex": "^\\[\"(?<commit>(?<commitShort>[0-9a-f]{7})[0-9a-f]*)\",\"(?<productVersion>.+)-insider\"",
-        "replace": "${productVersion}-${commitShort}"
+        "script": [
+            "$release = $page | ConvertFrom-Json -ErrorAction Stop",
+            "Write-Output \"$($release.url), $($release.timestamp)\""
+        ],
+        "regex": "insider/(?<commit>[^/]+)/VSCode-win32-x64-(?<prefix>[\\d.]+)[^\\d]+(?<suffix>[\\d.]+)",
+        "replace": "${prefix}-${suffix}"
     },
     "autoupdate": {
         "architecture": {
