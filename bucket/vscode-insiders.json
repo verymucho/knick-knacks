@@ -59,7 +59,7 @@
         "}",
         "Get-ChildItem $dir -File -Filter install-*.reg | ForEach-Object { reg import $_.FullName >nul 2>&1 }",
         "if (!(Test-Path \"$dir\\bin\\code.exe\") -and (Test-Path \"$dir\\bin\\code-insiders.exe\")) {",
-        "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.exe\" -Value \"$dir\\bin\\code-insiders.exe\" | Out-Null",
+        "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.cmd\" -Value \"$dir\\bin\\code-insiders.cmd\" | Out-Null",
         "}",
         "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.vscode-insiders\\extensions\")) {",
         "    info '[Portable Mode] Copying extensions...'",
