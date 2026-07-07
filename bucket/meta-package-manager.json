@@ -1,16 +1,16 @@
 {
-    "version": "7.0.1",
+    "version": "7.1.0",
     "description": "Wraps all package managers with a unifying CLI",
     "homepage": "https://kdeldycke.github.io/meta-package-manager/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kdeldycke/meta-package-manager/releases/download/v7.0.1/meta-package-manager-7.0.1-windows-x64.exe#/mpm.exe",
-            "hash": "5537197ce14f7ce945f2510f0d0d49e3498d0047612aa608cc46699c954635e6"
+            "url": "https://github.com/kdeldycke/meta-package-manager/releases/download/v7.1.0/meta-package-manager-7.1.0-windows-x64.exe#/mpm.exe",
+            "hash": "de3539509d8db9317f0fbdcecdf21abe64220b61c24a07fca1fee0f99070a4c7"
         },
         "arm64": {
-            "url": "https://github.com/kdeldycke/meta-package-manager/releases/download/v7.0.1/meta-package-manager-7.0.1-windows-arm64.exe#/mpm.exe",
-            "hash": "0f0560090fd3dc3f5e4bea9d33f07896aa304e0c714da39f8fe3259d9ce07a83"
+            "url": "https://github.com/kdeldycke/meta-package-manager/releases/download/v7.1.0/meta-package-manager-7.1.0-windows-arm64.exe#/mpm.exe",
+            "hash": "54d80efaece399ea56602ec73121902a22766d52788b3736811751604fa15dfb"
         }
     },
     "bin": "mpm.exe",
