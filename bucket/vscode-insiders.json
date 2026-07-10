@@ -41,6 +41,7 @@
         "bin"
     ],
     "post_install": [
+        "$dir = (Get-Item \"$dir\").ResolvedTarget",
         "$dirpath = \"$dir\".Replace('\\', '\\\\')",
         "$exepath = \"$dir\\Code - Insiders.exe\".Replace('\\', '\\\\')",
         "'install-associations', 'uninstall-associations', 'install-context', 'uninstall-context', 'install-github-integration', 'uninstall-github-integration' | ForEach-Object {",
@@ -58,9 +59,10 @@
         "  }",
         "}",
         "Get-ChildItem $dir -File -Filter install-*.reg | ForEach-Object { reg import $_.FullName >nul 2>&1 }",
-        "if (!(Test-Path \"$dir\\bin\\code.exe\") -and (Test-Path \"$dir\\bin\\code-insiders.exe\")) {",
+        "if (!(Test-Path \"$dir\\bin\\code.cmd\") -and (Test-Path \"$dir\\bin\\code-insiders.cmd\")) {",
         "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.cmd\" -Value \"$dir\\bin\\code-insiders.cmd\" | Out-Null",
         "}",
+        "if (Test-Path \"$dir\\bin\\code-insiders.exe\") { & \"$dir\\bin\\code-insiders.exe\" version use insider --install-dir \"$dir\" }",
         "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.vscode-insiders\\extensions\")) {",
         "    info '[Portable Mode] Copying extensions...'",
         "    Copy-Item \"$env:USERPROFILE\\.vscode-insiders\\extensions\" \"$dir\\data\" -Recurse",
