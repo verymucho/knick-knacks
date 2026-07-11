@@ -42,6 +42,7 @@
     ],
     "post_install": [
         "$dir = (Get-Item \"$dir\").ResolvedTarget",
+        "$build_dir = Get-ChildItem \"$dir\" -Directory | Where-Object { $_.Name -match '^[a-f0-9]{10,}$' } | Select-Object -First 1 -ExpandProperty FullName",
         "$dirpath = \"$dir\".Replace('\\', '\\\\')",
         "$exepath = \"$dir\\Code - Insiders.exe\".Replace('\\', '\\\\')",
         "'install-associations', 'uninstall-associations', 'install-context', 'uninstall-context', 'install-github-integration', 'uninstall-github-integration' | ForEach-Object {",
@@ -61,6 +62,9 @@
         "Get-ChildItem $dir -File -Filter install-*.reg | ForEach-Object { reg import $_.FullName >nul 2>&1 }",
         "if (!(Test-Path \"$dir\\bin\\code.cmd\") -and (Test-Path \"$dir\\bin\\code-insiders.cmd\")) {",
         "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.cmd\" -Value \"$dir\\bin\\code-insiders.cmd\" | Out-Null",
+        "}",
+        "if ($build_dir -and (Test-Path \"$build_dir\\resources\")) {",
+        "    New-Item -ItemType Junction -Path \"$dir\\resources\" -Target \"$_build_dir\\resources\" | Out-Null",
         "}",
         "if (Test-Path \"$dir\\bin\\code-insiders.exe\") { & \"$dir\\bin\\code-insiders.exe\" version use insider --install-dir \"$dir\" }",
         "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.vscode-insiders\\extensions\")) {",
