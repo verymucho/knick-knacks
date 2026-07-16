@@ -1,5 +1,5 @@
 {
-    "version": "1.130.0-1784097827290",
+    "version": "1.130.0-1784199882945",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -17,22 +17,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/bc2ac764ddd66802104366c182d490a03253f7e1/VSCode-win32-x64-1.130.0-insider.zip",
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/bc2ac764ddd66802104366c182d490a03253f7e1/vscode_cli_win32_x64_cli.zip"
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ecf367b2f20d54f697cef6075cb9c72b22c3c1b6/VSCode-win32-x64-1.130.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ecf367b2f20d54f697cef6075cb9c72b22c3c1b6/vscode_cli_win32_x64_cli.zip"
             ],
             "hash": [
-                "fb5a3f259777998b5544638f448abf6ab5edf2f01aec67bbc28e1ad563078499",
-                "60e921bfe5aed9b68450fc5b37e47f25960a255ed71b0cf6c374974bad7cecce"
+                "d0584369ac270265148672204d31348755e33baf77c440930788643e7d0fcf92",
+                "19ab7a502caa81af13cfd66124f8d0e4331aab960b68213b0a7dac6ac6830358"
             ]
         },
         "arm64": {
             "url": [
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/bc2ac764ddd66802104366c182d490a03253f7e1/VSCode-win32-arm64-1.130.0-insider.zip",
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/bc2ac764ddd66802104366c182d490a03253f7e1/vscode_cli_win32_arm64_cli.zip"
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ecf367b2f20d54f697cef6075cb9c72b22c3c1b6/VSCode-win32-arm64-1.130.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ecf367b2f20d54f697cef6075cb9c72b22c3c1b6/vscode_cli_win32_arm64_cli.zip"
             ],
             "hash": [
-                "5bba10d812648e0143338a9cc0c4a9fd356ec3f21ac1f40e200c090b82993d20",
-                "43ac793fc49d7f42f4c97b6daf6c9e85cd8973e1c9b3d8c20e6e9c5f531176a6"
+                "b5f9d3ec927f03c294887289636602662453db02316475be59edc327b2184264",
+                "45b968e9e8a55b3becbfa8a2fc3d7170d3f91b190b96605f78ce3235d73344e3"
             ]
         }
     },
@@ -64,7 +64,7 @@
         "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.cmd\" -Value \"$dir\\bin\\code-insiders.cmd\" | Out-Null",
         "}",
         "if ($build_dir -and (Test-Path \"$build_dir\\resources\")) {",
-        "    New-Item -ItemType Junction -Path \"$dir\\resources\" -Target \"$_build_dir\\resources\" | Out-Null",
+        "    New-Item -ItemType Junction -Path \"$dir\\resources\" -Target \"$build_dir\\resources\" | Out-Null",
         "}",
         "if (Test-Path \"$dir\\bin\\code-insiders.exe\") { & \"$dir\\bin\\code-insiders.exe\" version use insider --install-dir \"$dir\" }",
         "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.vscode-insiders\\extensions\")) {",
