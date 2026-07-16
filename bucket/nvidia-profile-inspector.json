@@ -1,10 +1,10 @@
 {
-    "version": "3.0.1.16",
+    "version": "3.0.2.2",
     "description": "View detailed info about your nVidia graphics card. Features overclocking options and other nifty settings.",
     "homepage": "https://github.com/Orbmu2k/nvidiaProfileInspector/",
     "license": "MIT",
-    "url": "https://github.com/Orbmu2k/nvidiaProfileInspector/releases/download/v3.0.1.16/nvidiaProfileInspector.zip",
-    "hash": "00da82953f8d9d2650c0d89ffd182d82ff447eeaf032782e148628d61d33be30",
+    "url": "https://github.com/Orbmu2k/nvidiaProfileInspector/releases/download/v3.0.2.2/nvidiaProfileInspector.zip",
+    "hash": "c23fa0e36ff7ef24154c9a69d7fe2098e51982d79085e249504f24c5086e2950",
     "bin": "nvidiaProfileInspector.exe",
     "shortcuts": [
         [
