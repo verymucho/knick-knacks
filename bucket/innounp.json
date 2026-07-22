@@ -8,9 +8,10 @@
     "bin": "innounp.exe",
     "checkver": {
         "url": "https://raw.githubusercontent.com/jrathlev/InnoUnpacker-Windows-GUI/refs/heads/master/innounp-2/docs/innounp.htm",
-        "regex": ">Version ([\\d.]+)"
+        "regex": ">Version (?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)",
+        "replace": "${major}.${minor}.${patch}"
     },
     "autoupdate": {
-        "url": "https://raw.githubusercontent.com/jrathlev/InnoUnpacker-Windows-GUI/refs/heads/master/innounp-2/bin/innounp-2.zip"
+        "url": "https://raw.githubusercontent.com/jrathlev/InnoUnpacker-Windows-GUI/refs/heads/master/innounp-2/bin/innounp-$matchMajor$matchMinor.zip"
     }
 }

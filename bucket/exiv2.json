@@ -11,7 +11,9 @@
         }
     },
     "bin": "bin\\exiv2.exe",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/Exiv2/exiv2"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
