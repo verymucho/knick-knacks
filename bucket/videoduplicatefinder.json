@@ -32,17 +32,17 @@
         "data"
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/0x90d/videoduplicatefinder/releases/tags/4.0.x",
+        "github": "https://api.github.com/repos/0x90d/videoduplicatefinder/releases/tags/4.1.x",
         "jsonpath": "$..body",
         "regex": "Last build based on ([0-9a-f]{7})",
-        "replace": "4.0-${1}"
+        "replace": "4.1-${1}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://github.com/0x90d/videoduplicatefinder/releases/download/4.0.x/GUI-win-x64.zip",
-                    "https://github.com/0x90d/videoduplicatefinder/releases/download/4.0.x/CLI-win-x64.zip"
+                    "https://github.com/0x90d/videoduplicatefinder/releases/download/4.1.x/GUI-win-x64.zip",
+                    "https://github.com/0x90d/videoduplicatefinder/releases/download/4.1.x/CLI-win-x64.zip"
                 ]
             }
         }
