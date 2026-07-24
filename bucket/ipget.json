@@ -1,31 +1,22 @@
 {
-    "version": "0.11.0",
+    "version": "0.13.1",
     "description": "Retrieve files over IPFS and save them locally",
     "homepage": "https://github.com/ipfs/ipget",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://dist.ipfs.tech/ipget/v0.11.0/ipget_v0.11.0_windows-amd64.zip",
-            "hash": "a32a2499988ccc253c54d179c2c8cda0da542e76ce394cdc16b8c79322dd1dc7"
-        },
-        "32bit": {
-            "url": "https://dist.ipfs.tech/ipget/v0.11.0/ipget_v0.11.0_windows-386.zip",
-            "hash": "31b31f06b7ae40dde26b92e1ee9d03a4f433cb8199407eb540a0fc71edfbfd4b"
+            "url": "https://github.com/ipfs/ipget/releases/download/v0.13.1/ipget_v0.13.1_windows-amd64.zip",
+            "hash": "c7178cf4d5e6394c83064afe1bb5c3d7e7d10fd79bf731d5e01a465be9498ba0"
         }
     },
     "extract_dir": "ipget",
-    "post_install": "Remove-Item \"$dir\\install.sh\" -Recurse",
+    "post_install": "Remove-Item \"$dir\\*\" -Exclude *.exe -Recurse -Force",
     "bin": "ipget.exe",
-    "checkver": {
-        "github": "https://github.com/ipfs/ipget"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dist.ipfs.tech/ipget/v$version/ipget_v$version_windows-amd64.zip"
-            },
-            "32bit": {
-                "url": "https://dist.ipfs.tech/ipget/v$version/ipget_v$version_windows-386.zip"
+                "url": "https://github.com/ipfs/ipget/releases/download/v$version/ipget_v$version_windows-amd64.zip"
             }
         }
     }
