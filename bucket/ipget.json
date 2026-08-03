@@ -1,12 +1,12 @@
 {
-    "version": "0.13.1",
+    "version": "0.13.2",
     "description": "Retrieve files over IPFS and save them locally",
     "homepage": "https://github.com/ipfs/ipget",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ipfs/ipget/releases/download/v0.13.1/ipget_v0.13.1_windows-amd64.zip",
-            "hash": "c7178cf4d5e6394c83064afe1bb5c3d7e7d10fd79bf731d5e01a465be9498ba0"
+            "url": "https://github.com/ipfs/ipget/releases/download/v0.13.2/ipget_v0.13.2_windows-amd64.zip",
+            "hash": "2a86592f63c3b58de2d04c5690a4e015c20d07cdd513a400702ef6f484a6f863"
         }
     },
     "extract_dir": "ipget",
