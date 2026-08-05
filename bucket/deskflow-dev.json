@@ -1,5 +1,5 @@
 {
-    "version": "1.26.0.347",
+    "version": "1.26.0.349",
     "description": "Share a single keyboard and mouse between multiple computers.",
     "homepage": "https://deskflow.org",
     "license": "GPL-2.0",
@@ -13,12 +13,12 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/deskflow/deskflow/releases/download/continuous/deskflow-continuous-win-x64-portable.7z",
-            "hash": "6af145b8292ea95eb5f2fb3d4504170d0599ec040101126c92f543e99937c8d3",
+            "hash": "7bf8ff716b6d0d46d6646de0cc3f2b15edc578aa431c29c779609a41b644bf5f",
             "extract_dir": "deskflow-continuous-win-x64-portable"
         },
         "arm64": {
             "url": "https://github.com/deskflow/deskflow/releases/download/continuous/deskflow-continuous-win-arm64-portable.7z",
-            "hash": "1bc3d48f9ca9dbc1c872981102a7fd99bf4f59dbb305c8d19a40c4904d8aa9ae",
+            "hash": "87da443cef2efc3b14d566706fda436dcd923625a6d14cccce609e4c48220c07",
             "extract_dir": "deskflow-continuous-win-arm64-portable"
         }
     },
