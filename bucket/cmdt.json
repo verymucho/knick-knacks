@@ -1,0 +1,43 @@
+{
+    "version": "1.0.0.8",
+    "description": "CMDT - Run as TrustedInstaller",
+    "homepage": "https://github.com/wesmar/cmdt",
+    "license": "MIT",
+    "notes": [
+        "Explorer context menu integration — cmdt -install registers right-click entries",
+        "for directories, executables, and shortcuts; cmdt -uninstall removes them."
+    ],
+    "url": "https://github.com/wesmar/CmdT/releases/download/latest/cmdt.7z#/dl.7z_",
+    "hash": "4dc435a6bbcd71090245d492784964174a9ad5ac19453160c474f0b9524f502d",
+    "architecture": {
+        "64bit": {
+            "pre_install": [
+                "Expand-7zipArchive -Path \"$dir\\$fname\" -Switches '-pgithub.com' -Removal",
+                "Get-ChildItem -Path \"$dir\" | Move-Item -Destination { $_.FullName -replace '_x64','' } -Force",
+                "Remove-Item \"$dir\\*\" -Include *_*.exe -Force"
+            ]
+        },
+        "32bit": {
+            "pre_install": [
+                "Expand-7zipArchive -Path \"$dir\\$fname\" -Switches '-pgithub.com' -Removal",
+                "Get-ChildItem -Path \"$dir\" | Move-Item -Destination { $_.FullName -replace '_x86','' } -Force",
+                "Remove-Item \"$dir\\*\" -Include *_*.exe -Force"
+            ]
+        },
+        "arm64": {
+            "pre_install": [
+                "Expand-7zipArchive -Path \"$dir\\$fname\" -Switches '-pgithub.com' -Removal",
+                "Get-ChildItem -Path \"$dir\" | Move-Item -Destination { $_.FullName -replace '_arm64','' } -Force",
+                "Remove-Item \"$dir\\*\" -Include *_*.exe -Force"
+            ]
+        }
+    },
+    "env_add_path": ".",
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/slickag/check-versions/refs/heads/main/manifests/cmdt/state.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://github.com/wesmar/CmdT/releases/download/latest/cmdt.7z#/dl.7z_"
+    }
+}
