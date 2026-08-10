@@ -1,12 +1,12 @@
 {
-    "version": "1879",
+    "version": "1880",
     "description": "A cross-platform software to find duplicated video (and image) files on hard disk based on similarity.",
     "homepage": "http://www.exiv2.org/",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/Exiv2/exiv2/actions/runs/31296790876/exiv2-x64-windows-2022.zip",
-            "hash": "d22aad4f8c9c6d9f4faf90e1183c79c4f7854839d12f644b5358870d59f886e1"
+            "url": "https://nightly.link/Exiv2/exiv2/actions/runs/31360197954/exiv2-x64-windows-2022.zip",
+            "hash": "bc2730279eb08c21e704bd01ce07f7c480f1eddc22982cf0c1bf366690b22739"
         }
     },
     "pre_install": [
