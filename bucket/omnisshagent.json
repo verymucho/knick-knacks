@@ -7,6 +7,10 @@
         "64bit": {
             "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v0.8.0/OmniSSHAgent-windows-amd64.exe",
             "hash": "32fc932a883be4190fbbff07143b922a048ae00f61964d394827fbab7ac1b26a"
+        },
+        "arm64": {
+            "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v0.8.0/OmniSSHAgent-windows-arm64.exe",
+            "hash": "32fc932a883be4190fbbff07143b922a048ae00f61964d394827fbab7ac1b26a"
         }
     },
     "pre_install": "Move-Item -Path \"$dir\\OmniSSHAgent-*.exe\" -Destination \"$dir\\OmniSSHAgent.exe\"",
@@ -20,7 +24,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v$version/OmniSSHAgent.zip"
+                "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v$version/OmniSSHAgent-windows-amd64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v$version/OmniSSHAgent-windows-arm64.exe"
             }
         },
         "hash": {
