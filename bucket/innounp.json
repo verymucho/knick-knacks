@@ -12,6 +12,6 @@
         "replace": "${major}.${minor}.${patch}"
     },
     "autoupdate": {
-        "url": "https://raw.githubusercontent.com/jrathlev/InnoUnpacker-Windows-GUI/refs/heads/master/innounp-2/bin/innounp-$matchMajor$matchMinor.zip"
+        "url": "https://raw.githubusercontent.com/jrathlev/InnoUnpacker-Windows-GUI/refs/heads/master/innounp-2/bin/innounp-$matchMajor.zip"
     }
 }
