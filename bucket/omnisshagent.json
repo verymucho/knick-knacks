@@ -1,16 +1,16 @@
 {
-    "version": "0.9.0",
+    "version": "1.0.0",
     "description": "Integrated ssh-agent for Windows.",
     "homepage": "https://github.com/masahide/OmniSSHAgent",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v0.9.0/OmniSSHAgent-windows-amd64.exe",
-            "hash": "4415dca34f491788abd0436a7f2d849b5d9395e6879b35e751a2e63e2e7901a1"
+            "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v1.0.0/OmniSSHAgent-windows-amd64.exe",
+            "hash": "247a03c27fd37ae750562d82cdba49e72dc826a16f4469fabf3e5cc2332fcdc5"
         },
         "arm64": {
-            "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v0.9.0/OmniSSHAgent-windows-arm64.exe",
-            "hash": "2161ce66c1e1f95aa2f437aca1a44dc6c34434ea1f8e86d8b47ba90251a4c611"
+            "url": "https://github.com/masahide/OmniSSHAgent/releases/download/v1.0.0/OmniSSHAgent-windows-arm64.exe",
+            "hash": "92ce1877c46e3ecbcb13ddf44eefdf90057f353cd977576ca7042005f3f72caa"
         }
     },
     "pre_install": "Move-Item -Path \"$dir\\OmniSSHAgent-*.exe\" -Destination \"$dir\\OmniSSHAgent.exe\"",
