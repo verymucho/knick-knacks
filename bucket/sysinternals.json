@@ -1,5 +1,5 @@
 {
-    "version": "2026.08.12",
+    "version": "2026.09.10",
     "description": "A set of utilities to manage, diagnose, troubleshoot, and monitor a Windows environment.",
     "homepage": "https://learn.microsoft.com/sysinternals",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://download.sysinternals.com/files/SysinternalsSuite.zip",
-            "hash": "6d471cfb9509cdd1dcec172c8dee330d8f0783dc9ede5ea720107f7804b2a10b",
+            "hash": "e1c73a31b575c9cb216a94484a5b162bd585deb8bd1a8775c8103ced39cc67ce",
             "pre_install": "Get-ChildItem -Path \"$dir\" | Move-Item -Destination { $_.FullName -replace '64','' } -Force",
             "bin": [
                 [
@@ -406,7 +406,7 @@
         },
         "32bit": {
             "url": "https://download.sysinternals.com/files/SysinternalsSuite.zip",
-            "hash": "6d471cfb9509cdd1dcec172c8dee330d8f0783dc9ede5ea720107f7804b2a10b",
+            "hash": "e1c73a31b575c9cb216a94484a5b162bd585deb8bd1a8775c8103ced39cc67ce",
             "bin": [
                 [
                     "accesschk.exe",
@@ -802,7 +802,7 @@
         },
         "arm64": {
             "url": "https://download.sysinternals.com/files/SysinternalsSuite-ARM64.zip",
-            "hash": "1b6fff3afc7cefc6be28ea66d26a814609974ece02280a9702ec562f93570f39",
+            "hash": "6317b8cdd05b1e9f91186da65819a2d5b21a5a8db2b045ba3a4254ec9c2c76be",
             "bin": [
                 [
                     "accesschk64a.exe",
