@@ -1,10 +1,10 @@
 {
-    "version": "2.2.1",
+    "version": "2.2.5",
     "description": "Software uninstaller with support for additional cleanup of registries/files",
     "homepage": "https://www.revouninstaller.com/products/revo-registry-cleaner-pro/",
     "license": "Shareware",
-    "url": "https://revoregcleaner.b-cdn.net/rrc221/RRC_ProPortable.zip",
-    "hash": "e2b55c1414c97b7a7a16b68d5f9a0e847fb6f59050c3d365deb111d41109f831",
+    "url": "https://revoregcleaner.b-cdn.net/rrc225/RRC_ProPortable.zip",
+    "hash": "c0646ceeb79e05d96f496e77117eda2a48d1b5cb7f1eb72a9f90e3b2ba3ee4d1",
     "extract_dir": "Revo Registry Cleaner Portable",
     "shortcuts": [
         [
