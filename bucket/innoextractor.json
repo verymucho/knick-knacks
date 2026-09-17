@@ -5,18 +5,23 @@
     "license": "Shareware",
     "url": "http://www.havysoft.cl/download/IE_Install.zip",
     "hash": "e96478ee1429825ebdb192e926bfb2918d45034937c2108fc8988794faa0374d",
+    "installer": {
+        "script": [
+            "Expand-InnoArchive \"$dir\\IE-Install.exe\" -Removal",
+            "Remove-Item \"$dir\\Changelog.txt\" -Force"
+        ]
+    },
+    "shortcuts": [
+        [
+            "InnoExtractor.exe",
+            "InnoExtractor"
+        ]
+    ],
     "checkver": {
         "url": "http://www.havysoft.cl/descargar.html",
         "regex": "(\\d+\\.\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
         "url": "http://www.havysoft.cl/download/IE_Install.zip"
-    },
-    "installer": {
-        "script": "Start-Process \"$dir\\IE-Install.exe\" \"/VERYSILENT /DIR=$dir /NORESTART\" -PassThru -NoNewWindow | Wait-Process"
-    },
-    "post_install": "Remove-Item \"$env:PUBLIC\\Desktop\\InnoExtractor.lnk\"",
-    "uninstaller": {
-        "script": "Invoke-ExternalCommand \"$dir\\unins000.exe\" -ArgumentList @('/VERYSILENT','/NORESTART') -RunAs | Out-Null"
     }
 }
