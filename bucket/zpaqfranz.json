@@ -5,22 +5,23 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/65.6/zpaqfranz.exe",
-            "hash": "e2b8db85fa47541c74cbc82ead51e4d4eda3d0c1da9c572f987fcca2901ead8a",
+            "url": [
+                "https://github.com/fcorbelli/zpaqfranz/releases/download/65.6/zpaqfranz.exe#/zpaq.exe",
+                "https://github.com/fcorbelli/zpaqfranz/releases/download/65.6/zpaqfranzhw.exe"
+            ],
+            "hash": [
+                "e2b8db85fa47541c74cbc82ead51e4d4eda3d0c1da9c572f987fcca2901ead8a",
+                "542232f48a28cef1b0d2395ae7230c3e4bfebf8cbd2125c5d52bc0f65b2e4f0e"
+            ],
             "bin": [
-                [
-                    "zpaqfranz.exe",
-                    "zpaq"
-                ]
+                "zpaq.exe",
+                "zpaqfranzhw.exe"
             ]
         },
         "32bit": {
-            "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/65.6/zpaqfranz32.exe",
+            "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/65.6/zpaqfranz32.exe#/zpaq.exe",
             "hash": "e5145facb238dc651f584e584b792aa84fa142290372b257c5a6ff7a9f8b7903",
-            "bin": [
-                "zpaqfranz32.exe",
-                "zpaq"
-            ]
+            "bin": "zpaq.exe"
         }
     },
     "checkver": {
@@ -30,10 +31,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/$version/zpaqfranz.exe"
+                "url": [
+                    "https://github.com/fcorbelli/zpaqfranz/releases/download/$version/zpaqfranz.exe#/zpaq.exe",
+                    "https://github.com/fcorbelli/zpaqfranz/releases/download/$version/zpaqfranzhw.exe"
+                ]
             },
             "32bit": {
-                "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/$version/zpaqfranz32.exe"
+                "url": "https://github.com/fcorbelli/zpaqfranz/releases/download/$version/zpaqfranz32.exe#/zpaq.exe"
             }
         }
     }
