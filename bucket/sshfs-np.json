@@ -1,0 +1,39 @@
+{
+    "version": "4.0.0",
+    "description": "SSHFS For Windows (modernization fork)",
+    "homepage": "https://winfsp.dev",
+    "license": {
+        "identifier": "GPL-2.0-or-later",
+        "url": "https://github.com/winfsp/sshfs-win/blob/HEAD/License.txt"
+    },
+    "depends": "winfsp-np",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/OzoneAsai/sshfs-win/releases/download/temporal/sshfs-win-4.0.0-x64.msi#/setup.msi_",
+            "hash": "4694e58821b795e5710def4f578282967d94457fffd49f988b7840f63babafce"
+        }
+    },
+    "pre_install": "if (-not (is_admin)) { abort \"`n[ERROR]  $app requires admin rights to $cmd.\" }",
+    "installer": {
+        "script": "Start-Process -FilePath 'msiexec.exe' -ArgumentList @('/i', \"$dir\\setup.msi_\", '/qn') -WindowStyle Hidden -Wait"
+    },
+    "pre_uninstall": "if (-not (is_admin)) { abort \"`n[ERROR]  $app requires admin rights to $cmd.\" }",
+    "uninstaller": {
+        "script": "Start-Process -FilePath 'msiexec.exe' -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn') -WindowStyle Hidden -Wait"
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/OzoneAsai/sshfs-win/releases",
+        "jsonpath": "$[*].assets[?(@.name =~ /sshfs-win/i)].browser_download_url",
+        "regex": "(?i)download/(?<tag>[^/]+)/sshfs-win-([\\d.]+).*\\.msi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/OzoneAsai/sshfs-win/releases/download/$matchTag/sshfs-win-$version-x64.msi#/setup.msi_"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
