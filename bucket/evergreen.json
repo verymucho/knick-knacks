@@ -1,0 +1,30 @@
+{
+    "version": "2608.2847.0",
+    "description": "Find the latest version and download URL for various Windows apps (Evergreen alternative)",
+    "homepage": "https://github.com/EUCPilots/evergreen-module",
+    "license": "MIT",
+    "url": "https://github.com/EUCPilots/evergreen-module/archive/refs/tags/v2608.2847.0.zip",
+    "hash": "730756d3673440b3c11fb2e38c56c945a75d6da348c8a9c289e13c0942d08308",
+    "extract_dir": "evergreen-module-2608.2847.0\\Evergreen",
+    "psmodule": {
+        "name": "Evergreen"
+    },
+    "post_install": [
+        "$Env:EVERGREEN_APPS_PATH = \"$dir\\Apps\"",
+        "Import-Module \"$dir\\Evergreen.psd1\"",
+        "Update-Evergreen"
+    ],
+    "env_set": {
+        "EVERGREEN_APPS_PATH": "$dir\\Apps"
+    },
+    "persist": "Apps",
+    "checkver": {
+        "url": "https://api.github.com/repos/EUCPilots/evergreen-module/tags",
+        "jsonpath": "$[0].name",
+        "regex": "(?i)v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/EUCPilots/evergreen-module/archive/refs/tags/v$version.zip",
+        "extract_dir": "evergreen-module-$version\\Evergreen"
+    }
+}

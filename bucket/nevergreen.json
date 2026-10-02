@@ -1,0 +1,21 @@
+{
+    "version": "2408.1",
+    "description": "Find the latest version and download URL for various Windows apps (Evergreen alternative)",
+    "homepage": "https://github.com/DanGough/Nevergreen",
+    "license": "Unlicense",
+    "url": "https://github.com/DanGough/Nevergreen/archive/refs/tags/v2408.1.zip",
+    "hash": "7283b746a418bc9acf4988ec2830f2b6cc2597185e4b8c341f5022f94e060ae6",
+    "extract_dir": "Nevergreen-2408.1\\Nevergreen",
+    "psmodule": {
+        "name": "Nevergreen"
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/DanGough/Nevergreen/tags",
+        "jsonpath": "$[0].name",
+        "regex": "(?i)v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/DanGough/Nevergreen/archive/refs/tags/v$version.zip",
+        "extract_dir": "Nevergreen-$version\\Nevergreen"
+    }
+}
