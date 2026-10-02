@@ -1,0 +1,19 @@
+{
+    "version": "1.1.13",
+    "description": "PowerShell module working with the admin role",
+    "homepage": "https://github.com/PSModule/Admin",
+    "license": "MIT",
+    "url": "https://cdn.powershellgallery.com/packages/admin.1.1.13.nupkg",
+    "hash": "b27ddecfbb3924d60100c4bd302b7e4681685e2c9c4327c4fa5370bb2818157c",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content*.xml\", \"$dir\\*.nuspec\" -Recurse",
+    "psmodule": {
+        "name": "Admin"
+    },
+    "checkver": {
+        "url": "https://www.powershellgallery.com/packages/Admin",
+        "regex": "<h2>([\\d.]+)</h2>"
+    },
+    "autoupdate": {
+        "url": "https://cdn.powershellgallery.com/packages/admin.$version.nupkg"
+    }
+}

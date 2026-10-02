@@ -1,0 +1,23 @@
+{
+    "version": "1.1.2",
+    "description": "PowerShell module to download and install fonts from NerdFonts",
+    "homepage": "https://github.com/PSModule/NerdFonts",
+    "license": "MIT",
+    "depends": [
+        "knick-knacks/admin-ps",
+        "knick-knacks/fonts-ps"
+    ],
+    "url": "https://github.com/PSModule/NerdFonts/releases/download/v1.1.2/NerdFonts-1.1.2.zip",
+    "hash": "3552351e341b967b6473158255c6839bc1e554f985df35c3292e92e52daa0e3a",
+    "extract_dir": "NerdFonts",
+    "psmodule": {
+        "name": "NerdFonts"
+    },
+    "post_install": "(Get-Content \"$dir\\NerdFonts.psm1\").Replace(\"([Environment]::GetFolderPath('LocalApplicationData'))\", \"'$dir'\").Replace(\"PSModule/NerdFonts/cache\", \"cache\") | Set-Content \"$dir\\NerdFonts.psm1\"",
+    "persist": "cache",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/PSModule/NerdFonts/releases/download/v$version/NerdFonts-$version.zip",
+        "extract_dir": "NerdFonts"
+    }
+}

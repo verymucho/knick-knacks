@@ -1,0 +1,19 @@
+{
+    "version": "1.1.27",
+    "description": "PowerShell module for managing fonts",
+    "homepage": "https://github.com/PSModule/Fonts",
+    "license": "MIT",
+    "url": "https://cdn.powershellgallery.com/packages/fonts.1.1.27.nupkg",
+    "hash": "72cabb309b4fb39fb1931f7969ab23c62311fc58b0890259c7cbf1e2a2623255",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content*.xml\", \"$dir\\*.nuspec\" -Recurse",
+    "psmodule": {
+        "name": "Fonts"
+    },
+    "checkver": {
+        "url": "https://www.powershellgallery.com/packages/Fonts",
+        "regex": "<h2>([\\d.]+)</h2>"
+    },
+    "autoupdate": {
+        "url": "https://cdn.powershellgallery.com/packages/fonts.$version.nupkg"
+    }
+}
