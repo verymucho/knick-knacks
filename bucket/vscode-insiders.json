@@ -1,5 +1,5 @@
 {
-    "version": "1.142.0-1791435963406",
+    "version": "1.142.0-1791479242578",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -17,22 +17,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ddcb6c27affe30052a2ade0bfe6c8bcaea9f89e5/VSCode-win32-x64-1.142.0-insider.zip",
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ddcb6c27affe30052a2ade0bfe6c8bcaea9f89e5/vscode_cli_win32_x64_cli.zip"
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/d2a9268a5f75f47930b6e77853d2346824cab2b2/VSCode-win32-x64-1.142.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/d2a9268a5f75f47930b6e77853d2346824cab2b2/vscode_cli_win32_x64_cli.zip"
             ],
             "hash": [
-                "fc0ac86c711c05c25e9e7c13ab6853d185b704672280093bd5adcf7bc4952301",
-                "97c77f8d59f04c0d0088f0b561169609a6e7e044a70abe1fb264d11f42ccd19b"
+                "6d10d404ae5f109173a585615229a949f5b3e7b5cb93904a27acf0a990894c49",
+                "2e04a330cd3723f56f5f2ee14e5daea4577a04c5d0050f95a0aae4596449db04"
             ]
         },
         "arm64": {
             "url": [
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ddcb6c27affe30052a2ade0bfe6c8bcaea9f89e5/VSCode-win32-arm64-1.142.0-insider.zip",
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/ddcb6c27affe30052a2ade0bfe6c8bcaea9f89e5/vscode_cli_win32_arm64_cli.zip"
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/d2a9268a5f75f47930b6e77853d2346824cab2b2/VSCode-win32-arm64-1.142.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/d2a9268a5f75f47930b6e77853d2346824cab2b2/vscode_cli_win32_arm64_cli.zip"
             ],
             "hash": [
-                "835d3fa931ca4c7f09669336f38310b053b3c131ae9cbed46e4b405aeb5fe151",
-                "ee35949b2e269e8d10e2ac1c144757eb2ad50b1a82f7bf4e42b536857829ca58"
+                "f992876ece5bcec10e9438e13a8c6207a4ddb8a757f002253293b9147fb7fc77",
+                "c85b4eb883c4a3e17d6762e680f2777637a00a71d29b7f60560c06ead8b749d2"
             ]
         }
     },
