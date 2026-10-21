@@ -1,10 +1,10 @@
 {
-    "version": "7.3.1.0",
+    "version": "7.3.2.0",
     "description": "A better oragnized, documented, user friendly NVPI fork",
     "homepage": "https://github.com/xHybred/NvidiaProfileInspectorRevamped/",
     "license": "MIT",
-    "url": "https://github.com/xHybred/NvidiaProfileInspectorRevamped/releases/download/v7.3.1.0/NVPI-R.zip",
-    "hash": "80dfe4767979d1a93d19b7a90449ee345bad0f7acd341f59f40ea6986d1c474c",
+    "url": "https://github.com/xHybred/NvidiaProfileInspectorRevamped/releases/download/v7.3.2.0/NVPI-R.zip",
+    "hash": "fee7dd4d9d920c79ac5aeeef31e42886e9dc4c02f6efa3b16de70de92273e888",
     "shortcuts": [
         [
             "NVPI Revamped App/NVPI-R.exe",
