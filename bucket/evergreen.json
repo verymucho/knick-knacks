@@ -1,11 +1,11 @@
 {
-    "version": "2610.2856.0",
+    "version": "2610.2859.0",
     "description": "Find the latest version and download URL for various Windows apps (Evergreen alternative)",
     "homepage": "https://github.com/EUCPilots/evergreen-module",
     "license": "MIT",
-    "url": "https://github.com/EUCPilots/evergreen-module/archive/refs/tags/v2610.2856.0.zip",
-    "hash": "cd037ba4ada1941516f1b9056001c24cdc4ee739c369d7aabe598aed87643c9a",
-    "extract_dir": "evergreen-module-2610.2856.0\\Evergreen",
+    "url": "https://github.com/EUCPilots/evergreen-module/archive/refs/tags/v2610.2859.0.zip",
+    "hash": "46a9312fea0ff2ce5cdc46c03b2bcb28a132afaecfbab6b76a3a65f3bbcda025",
+    "extract_dir": "evergreen-module-2610.2859.0\\Evergreen",
     "psmodule": {
         "name": "Evergreen"
     },
