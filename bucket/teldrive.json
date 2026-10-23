@@ -1,16 +1,16 @@
 {
-    "version": "2.0.9",
+    "version": "2.0.10",
     "description": "Powerful utility that enables you to organise your telegram files",
     "homepage": "https://github.com/tgdrive/teldrive",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tgdrive/teldrive/releases/download/2.0.9/teldrive-2.0.9-windows-amd64.zip",
-            "hash": "b671377b92a2999b054ee31300764a93cd1d0bacd234280d107b30a1904dcf91"
+            "url": "https://github.com/tgdrive/teldrive/releases/download/2.0.10/teldrive-2.0.10-windows-amd64.zip",
+            "hash": "ccb00100d74884f22b3c8731992a511519c75f35d0ded834c7bf687718ea445f"
         },
         "arm64": {
-            "url": "https://github.com/tgdrive/teldrive/releases/download/2.0.9/teldrive-2.0.9-windows-arm64.zip",
-            "hash": "cef4c54e78a95b914da637c6e6d641f882ad4e89901f550bd30aa15c00044aea"
+            "url": "https://github.com/tgdrive/teldrive/releases/download/2.0.10/teldrive-2.0.10-windows-arm64.zip",
+            "hash": "d77db65df5f5e4eebab0fcaeca62bd0a4c1d6c96da8b86b0134b414d815b48ac"
         }
     },
     "pre_install": "if(!(Test-Path \"$persist_dir/config.toml\")) { Add-Content \"$dir/config.toml\" $null }",
