@@ -1,5 +1,5 @@
 {
-    "version": "1.147.0-1794589642525",
+    "version": "1.147.0-1794805519515",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -17,22 +17,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/944d79c5b914eea991cc9a92c5e08053e565f983/VSCode-win32-x64-1.147.0-insider.zip",
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/944d79c5b914eea991cc9a92c5e08053e565f983/vscode_cli_win32_x64_cli.zip"
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/95906867e0763b595ee0c8814ba93fea96798d3e/VSCode-win32-x64-1.147.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/95906867e0763b595ee0c8814ba93fea96798d3e/vscode_cli_win32_x64_cli.zip"
             ],
             "hash": [
-                "a796a7264d4b4e6bcb94e9486cbf85d4a55c6fb926f7196764a924c96da1ce29",
-                "aee5a3202f8d2774bc7c1270b87059e3365879afee1855a23f87f469102f2976"
+                "e8747f80cf93c0a30d5a71d7c06a3d16c069e85d2cc9791a28b2754fc0ea2b11",
+                "e267e075ab7ef730ed48a416737c289fc5d2e0e17d039c450d8cc0f08688c48e"
             ]
         },
         "arm64": {
             "url": [
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/944d79c5b914eea991cc9a92c5e08053e565f983/VSCode-win32-arm64-1.147.0-insider.zip",
-                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/944d79c5b914eea991cc9a92c5e08053e565f983/vscode_cli_win32_arm64_cli.zip"
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/95906867e0763b595ee0c8814ba93fea96798d3e/VSCode-win32-arm64-1.147.0-insider.zip",
+                "https://vscode.download.prss.microsoft.com/dbazure/download/insider/95906867e0763b595ee0c8814ba93fea96798d3e/vscode_cli_win32_arm64_cli.zip"
             ],
             "hash": [
-                "d63f2fc0c32bf343e284ec7eaddfd8b2e4b1da85ba65ee916aa45bc464f8aba5",
-                "ad8b9a6b6e3834c71f45508e8509e02c52536b587b9817f599c853d60183725e"
+                "ee6a51285ce746e65468d4b946ebbf1031f5d303b442c25989d77d85eca1d3ba",
+                "615880fe5a3c88a5f205279bbc1fdfec09c4b8170b6aa6eb4fa0573ae743d264"
             ]
         }
     },
@@ -41,10 +41,13 @@
         "bin"
     ],
     "post_install": [
-        "$dir = (Get-Item \"$dir\").ResolvedTarget",
-        "$build_dir = Get-ChildItem \"$dir\" -Directory | Where-Object { $_.Name -match '^[a-f0-9]{10,}$' } | Select-Object -First 1 -ExpandProperty FullName",
+        "# $dir = (Get-Item \"$dir\").ResolvedTarget",
+        "# $build_dir = Get-ChildItem \"$dir\" -Directory | Where-Object { $_.Name -match '^[a-f0-9]{10,}$' } | Select-Object -First 1 -ExpandProperty FullName",
         "$dirpath = \"$dir\".Replace('\\', '\\\\')",
         "$exepath = \"$dir\\Code - Insiders.exe\".Replace('\\', '\\\\')",
+        "$versionfolder = Get-ChildItem -LiteralPath $dir -Directory | Where-Object {",
+        "    ($_.Name -match '^[a-fA-F0-9]{10,}$') -and (Test-Path -LiteralPath \"$($_.FullName)\\resources\" -PathType Container)",
+        "} | Select-Object -First 1 -ExpandProperty Name",
         "'install-associations', 'uninstall-associations', 'install-context', 'uninstall-context', 'install-github-integration', 'uninstall-github-integration' | ForEach-Object {",
         "  if (Test-Path \"$bucketsdir\\extras\\scripts\\vscode\\$_.reg\") {",
         "    $content = Get-Content \"$bucketsdir\\extras\\scripts\\vscode\\$_.reg\"",
@@ -53,6 +56,11 @@
         "    $content = $content.Replace('&Code', 'Code &Insiders')",
         "    $content = $content.Replace('771FD6B0-FA20-440A-A002-3B3BAC16DC50', '217B4C08-948D-4276-BFBB-BEE930AE5A2C')",
         "    $content = $content.Replace('Microsoft Visual Studio Code', 'Microsoft Visual Studio Code Insiders')",
+        "    if ($versionfolder) {",
+        "        $content = $content.Replace('$versionfolder', $versionfolder)",
+        "    } else {",
+        "        $content = $content.Replace('\\\\$versionfolder', '')",
+        "    }",
         "    if ($global) {",
         "      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
         "    }",
@@ -63,9 +71,9 @@
         "if (!(Test-Path \"$dir\\bin\\code.cmd\") -and (Test-Path \"$dir\\bin\\code-insiders.cmd\")) {",
         "    New-Item -ItemType SymbolicLink -Path \"$dir\\bin\\code.cmd\" -Value \"$dir\\bin\\code-insiders.cmd\" | Out-Null",
         "}",
-        "if ($build_dir -and (Test-Path \"$build_dir\\resources\")) {",
-        "    New-Item -ItemType Junction -Path \"$dir\\resources\" -Target \"$build_dir\\resources\" | Out-Null",
-        "}",
+        "# if ($build_dir -and (Test-Path \"$build_dir\\resources\")) {",
+        "#     New-Item -ItemType Junction -Path \"$dir\\resources\" -Target \"$build_dir\\resources\" | Out-Null",
+        "# }",
         "if (Test-Path \"$dir\\bin\\code-insiders.exe\") { & \"$dir\\bin\\code-insiders.exe\" version use insider --install-dir \"$dir\" }",
         "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.vscode-insiders\\extensions\")) {",
         "    info '[Portable Mode] Copying extensions...'",
