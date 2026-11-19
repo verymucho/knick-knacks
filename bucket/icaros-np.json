@@ -1,0 +1,69 @@
+{
+    "version": "4.0.0a1",
+    "description": "Collection of shell extensions that provide File Explorer thumbnails for a variety of video formats.",
+    "homepage": "https://github.com/Xanashi/Icaros",
+    "license": "Freeware",
+    "url": [
+        "https://github.com/Xanashi/Icaros/releases/download/v4.0.0a1/Icaros_v4.0.0_a1.zip",
+        "https://github.com/Xanashi/Icaros/releases/download/v4.0.0a1/Atlas.zip"
+    ],
+    "hash": [
+        "79b25c3ac0518c286142c281e11ec583437d14fb30ff212b7c6cede93647f2aa",
+        "c6615065c2881a63ef3c4b2899a64acad2322cf0f74e036e431f4d656d1a0f9b"
+    ],
+    "pre_install": [
+        "if (!(is_admin)) {",
+        "    error \"Administrator rights are required to install $app.\"",
+        "    break",
+        "}"
+    ],
+    "post_install": [
+        "regsvr32 /s \"$dir\\32-bit\\IcarosThumbnailProvider.dll\"",
+        "regsvr32 /s \"$dir\\32-bit\\IcarosPropertyHandler.dll\"",
+        "",
+        "if ($architecture -eq '64bit') {",
+        "    regsvr32 /s \"$dir\\64-bit\\IcarosThumbnailProvider.dll\"",
+        "    regsvr32 /s \"$dir\\64-bit\\IcarosPropertyHandler.dll\"",
+        "}",
+        "",
+        "Stop-Process -Name explorer"
+    ],
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) {",
+            "    error \"Administrator rights are required to uninstall $app.\"",
+            "    break",
+            "}",
+            "",
+            "regsvr32 /s /u \"$dir\\32-bit\\IcarosThumbnailProvider.dll\"",
+            "regsvr32 /s /u \"$dir\\32-bit\\IcarosPropertyHandler.dll\"",
+            "",
+            "if ($architecture -eq '64bit') {",
+            "    regsvr32 /s /u \"$dir\\64-bit\\IcarosThumbnailProvider.dll\"",
+            "    regsvr32 /s /u \"$dir\\64-bit\\IcarosPropertyHandler.dll\"",
+            "}",
+            "",
+            "Stop-Process -Name explorer",
+            "# This seems to impede uninstallation sometimes",
+            "Stop-Process -ErrorAction Ignore -Name OpenWith"
+        ]
+    },
+    "bin": "IcarosConfig.exe",
+    "shortcuts": [
+        [
+            "IcarosConfig.exe",
+            "Icaros"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Xanashi/Icaros/releases/latest",
+        "jsonpath": "$.assets[?(@.name =~ /Icaros.+\\.zip$/i)].browser_download_url",
+        "regex": "(?i)/download/v([\\w.-]+)/(?<filename>Icaros.+\\.zip)"
+    },
+    "autoupdate": {
+        "url": [
+            "https://github.com/Xanashi/Icaros/releases/download/v$version/$matchFilename",
+            "https://github.com/Xanashi/Icaros/releases/download/v$version/Atlas.zip"
+        ]
+    }
+}
